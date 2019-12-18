@@ -21,6 +21,8 @@ tens_multiple = ["", "", "twenty", "thirty", "forty",
 
 # number = list(map(int, str(n)))
 
+# convert given number to list. 
+# NOTE: Below method stores the number to list in reverse order
 number = [0, 0, 0, 0, 0]
 i = 0
 while n > 0:
@@ -28,12 +30,15 @@ while n > 0:
     n = n // 10
     i += 1
 
-print(number)
+# print(number)
 InWords = ""
 
 if len(number) > 5:
     print("Given number is more than 5 digits. Please enter a 5 digit number")
 
+
+# NOTE: Below list has given number in reverse order. Hence traversing the list from right to left
+# this is to decide the thousands place
 
 if number[4] != 0:
     if number[4] == 1:
@@ -44,10 +49,12 @@ else:
     if number[3] != 0:
         InWords += one_digits[number[3]] + " thousand "
 
+# this is to decide the hundredth place
 if number[2] != 0:
     InWords += one_digits[number[2]]  + " hundred "
 
 
+# this is to decide the tenth and units place
 if number[1] != 0:
     if number[1] == 1:
         InWords += two_digits[number[1]] 
