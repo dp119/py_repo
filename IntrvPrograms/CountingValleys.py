@@ -37,12 +37,14 @@ s = "UDDDUDUU"
 
 list1 = list(s)
 list2 = []
+print(len(list(s)))
 
-for i in range(len(list1)):
 
-    if list1[i] == "U":
+for i in range(len(s)):
+
+    if s[i] == "U":
         list2.append("1")
-    elif list1[i] == "D":
+    elif s[i] == "D":
         list2.append("-1")
     else:
         pass
@@ -53,14 +55,11 @@ x = 0
 counter = 0
 for i in range(len(list2)):
     x = x + int(list2[i])
-    j = i + 1
-    # print(list2[j])
-    if x == 0 and x + int(list2[j]) < 0:
+    #print(x - int(list2[i]))
+    if x - int(list2[i]) < 0 and x == 0:
         counter = counter + 1
 
 print(counter)
-
-
 
 
 def countingValleys(n, s):
