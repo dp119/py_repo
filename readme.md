@@ -449,17 +449,49 @@ What is keyword argument
 
 # <h2> Map, Filter and Reduce Functions in Python
 	
-# <h2> Conversions
+# <h2> Explicit Type Conversions
+# <h2> Type Conversions (explicit)
 
-#String to Int
+# h<4> String to Int
 
-#Int to String
+    s = "1001"
 
-#String to List
+    i = int(s)
 
-#Integer to List
+    print(type(i))
 
-#List to String or Integer
+
+# h<4> Int to String
+
+    i = 1001
+    s = str(i)
+    print(type(s))
+
+# h<4> String to List
+
+    s = "youtube"
+    l = list(s)
+    print(l)
+
+
+# h<4> Integer to List
+
+    n = 12345
+
+    #l = list(i)
+    # Above step can be done for a string, but it does not work for integer. It returns error - INT object not iterable
+
+    # method 1 using for loop
+    l1 = []
+    for i in str(n):
+        l1.append(int(i))
+
+    print(l1)
+
+    # method 2 using map
+
+    l2 = list(map(int, str(n)))
+    print(l2)
 
 #List to Set
 

@@ -1,39 +1,42 @@
 # <h2> Type Conversions (explicit)
 
-# String to Int
+# h<4> String to Int
 
-# s = "1001"
+    s = "1001"
 
-# i = int(s)
+    i = int(s)
 
-# print(type(i))
-
-
-# Int to String
-
-# i = 1001
-# s = str(i)
-# print(type(s))
-
-# String to List
-
-# s = "youtube"
-# l = list(s)
-# print(l)
+    print(type(i))
 
 
-# Integer to List
+# h<4> Int to String
 
-n = 12345
+    i = 1001
+    s = str(i)
+    print(type(s))
 
-#l = list(i)
-# Above step can be done for a string, but it does not work for integer. It returns error - INT object not iterable
+# h<4> String to List
 
-
-l = []
-for i in str(n):
-    l.append(int(i))
-
-print(l)
+    s = "youtube"
+    l = list(s)
+    print(l)
 
 
+# h<4> Integer to List
+
+    n = 12345
+
+    #l = list(i)
+    # Above step can be done for a string, but it does not work for integer. It returns error - INT object not iterable
+
+    # method 1 using for loop
+    l1 = []
+    for i in str(n):
+        l1.append(int(i))
+
+    print(l1)
+
+    # method 2 using map
+
+    l2 = list(map(int, str(n)))
+    print(l2)
