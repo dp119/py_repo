@@ -447,6 +447,34 @@ What is keyword argument
 	print(message) # prints b
 	
 
+# <h2> Map, Filter and Reduce Functions in Python
+	
+# <h2> Conversions
+
+#String to Int
+
+#Int to String
+
+#String to List
+
+#Integer to List
+
+#List to String or Integer
+
+#List to Set
+
+#Set to List
+
+#List to Dictionary
+
+#Dictionary Key to List
+
+#Dictionary Value to List
+
+#Dictionary 
+
+#HashMap
+
 # <h2> Debugging in VS Code discussed at 1:33
 
 # <h2> VS Code tricks at 1:36
