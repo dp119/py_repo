@@ -450,9 +450,8 @@ What is keyword argument
 # <h2> Map, Filter and Reduce Functions in Python
 	
 # <h2> Explicit Type Conversions
-# <h2> Type Conversions (explicit)
 
-# h<4> String to Int
+# <h4> String to Int
 
     s = "1001"
 
@@ -461,20 +460,20 @@ What is keyword argument
     print(type(i))
 
 
-# h<4> Int to String
+# <h4> Int to String
 
     i = 1001
     s = str(i)
     print(type(s))
 
-# h<4> String to List
+# <h4> String to List
 
     s = "youtube"
     l = list(s)
     print(l)
 
 
-# h<4> Integer to List
+# <h4> Integer to List
 
     n = 12345
 
