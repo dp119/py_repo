@@ -336,7 +336,7 @@ Difference between list and range objects @1:14:00
 
 
 # <h2> Tuples (All about tuples)
-
+#A tuple is a collection which is ordered and immutable. In Python tuples are written with round brackets.
 
 	thistuple = ("apple", "banana", "cherry", "orange", "kiwi", "melon", "mango")
 
@@ -412,7 +412,8 @@ Difference between list and range objects @1:14:00
 	# ('a', 'b', 'c', 1, 2, 3)
 
 # <h6> count() on a tuple
-# Returns the number of times a value appears in the tuple
+
+#Returns the number of times a value appears in the tuple
 
 	thistuple = (1, 3, 7, 8, 7, 5, 4, 6, 8, 5)
 
@@ -422,6 +423,7 @@ Difference between list and range objects @1:14:00
 	#returns 2
 
 # <h6> index() method on a tuple
+
 #Returns position of first occurence of a value in a tuple
 
 	thistuple = (1, 3, 7, 8, 7, 5, 4, 6, 8, 5)
@@ -570,30 +572,30 @@ Difference between list and range objects @1:14:00
     n = 12345
 
     #l = list(i)
-# Above step can be done for a string, but it does not work for integer. It returns error - INT object not iterable
+#Above step can be done for a string, but it does not work for integer. It returns error - INT object not iterable
 
-# method 1 using for loop
+#method 1 using for loop
     l1 = []
     for i in str(n):
         l1.append(int(i))
 
     print(l1)
 
-# method 2 using map
+#method 2 using map
 
     l2 = list(map(int, str(n)))
     print(l2)
 
 
 
-# List to Set
+#List to Set
 
 	l = [1, 2, 3, 4, 5]
 	s = set(l)
 	print(s)
 
 
-# Set to List
+#Set to List
 
 	s = {1, 2, 3, 4, 5}
 	l = list(s)
