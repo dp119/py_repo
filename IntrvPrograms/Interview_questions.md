@@ -77,3 +77,20 @@
 
     print("Simple Interest is {}".format(SI))
 
+
+
+| PYTHON Quiz Results 											|
+| Score: 22 of 25												|
+| ------------------------------------------------------------- |
+
+
+
+| Question 1:													
+What is a correct syntax to output "Hello World" in Python?
+
+	print("Hello World")    Your answer  
+	p("Hello World")
+	echo("Hello World");
+	echo "Hello World"
+
+																|

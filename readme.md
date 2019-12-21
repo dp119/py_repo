@@ -335,6 +335,14 @@ Difference between list and range objects @1:14:00
 
 
 
+# <h2> Python Collections (Arrays)
+# There are four collection data types in the Python programming language:
+
+# List is a collection which is ordered and changeable. Allows duplicate members.
+# Tuple is a collection which is ordered and unchangeable. Allows duplicate members.
+# Set is a collection which is unordered and unindexed. No duplicate members.
+# Dictionary is a collection which is unordered, changeable and indexed. No duplicate members.
+
 # <h2> Tuples (All about tuples)
 #A tuple is a collection which is ordered and immutable. In Python tuples are written with round brackets.
 
@@ -619,6 +627,11 @@ Difference between list and range objects @1:14:00
 #Komposite, Kafka, Airflow
 
 #All the python libraries used
+
+#Regex and sub function
+
+#Trim and strip, replace, replacestring function to remove whitespaces
+
 
 Difference between lists and tuple
 
