@@ -51,6 +51,18 @@
 	print(thislist2)  # still returns [1, 2, 3, 4, 5]
 
 
+# <h2> Given list, list1 = [(1, 2), (3, 3), (1, 1)]. Sort it according to second element
+
+	list1 = [(1, 2), (3, 3), (1, 1)]
+
+	def sortSecond(val):
+		return val[1]
+
+	list1.sort(key=sortSecond) 
+	#list.sort(reverse=True, key=sortSecond) for descending order
+
+	print(list1)
+
 
 # <h2> Remove duplicates from a list
 
