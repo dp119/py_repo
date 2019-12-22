@@ -2,6 +2,28 @@
 
 # <h1> Basic Programs
 
+# <h2> Print String in reverse
+
+# <h5> With String Slicing
+	txt = "Hello World"[::-1]
+	print(txt)
+
+
+# <h5> With For loop
+	txt = "Hello World"
+	revStr = ""
+	for i in txt:
+		revStr = i + revStr
+
+	print(revStr)
+
+
+# <h5> With reverse() function
+	txt = "Hello World"
+	revStr1 = reversed(txt)
+	print(''.join(revStr1))
+
+
 # <h2> Remove duplicates from a list
 
 # <h5> sol1
