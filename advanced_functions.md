@@ -177,8 +177,8 @@
 #reduce() stores the intermediate result and only returns the final summation value. Whereas, accumulate() returns a list containing the intermediate results. The last number of the list returned is summation value of the list.
 #reduce(fun,seq) takes function as 1st and sequence as 2nd argument. In contrast accumulate(seq,fun) takes sequence as 1st argument and function as 2nd argument.
 
-		print(functools.reduce(operator.add, lis))  #prints 22
+	print(functools.reduce(operator.add, lis))  #prints 22
 
 
-		import itertools 
-		print(list(itertools.accumulate(lis,lambda x,y : x+y)))    #prints [1, 4, 8, 18, 22]
+	import itertools 
+	print(list(itertools.accumulate(lis,lambda x,y : x+y)))    #prints [1, 4, 8, 18, 22]
