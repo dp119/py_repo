@@ -1,6 +1,11 @@
 
 # <h1> Python Topics
 
+NOTE: Please refer, below files in same directory
+python_collectins.py - For all about collections
+conversions.py - For all about explicit type conversions
+advanced_functions - For examples on lambda, map, filter, reduce, itertools etc
+
 # <h6> Python Language and Python Implementations
 
 
@@ -336,6 +341,8 @@ Difference between list and range objects @1:14:00
 
 
 # <h2> Python Collections (Arrays)
+#NOTE: For all about collections, please see python_collectins.py in the same directory
+
 # There are four collection data types in the Python programming language:
 
 # List is a collection which is ordered and changeable. Allows duplicate members.

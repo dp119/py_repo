@@ -1,7 +1,13 @@
+# function that filters vowels 
+
+sequence = ['g', 'e', 'e', 'j', 'k', 's', 'p', 'r'] 
+
+def vowels(x):
+    if x in "aeiou":
+        return True
+    else:
+        return False
 
 
-thisdict = {
-    "brand": "Ford",
-    "model": "Mustang",
-    "year": 1964
-}
+v = list(filter(vowels, sequence))
+print(v)
