@@ -1,8 +1,8 @@
 
 
-#<h2> Python Advanced functions examples
+# <h2> Python Advanced functions examples
 
-#<h4> lambda function
+# <h4> lambda function
 
 
 #A lambda function is a small anonymous function.
@@ -46,7 +46,7 @@
 
 
 
-#<h4> Map function
+# <h4> Map function
 
 #map() function executes a specified function for each item in a iterable. The item is sent to the function as a parameter.
 #Syntax - map(fun, iter)
@@ -84,7 +84,7 @@
 
 
 
-#<h4> Filter function
+# <h4> Filter function
 
 #filter() function returns an iterator were the items are filtered through a function to test if the item is accepted or not
 
@@ -134,7 +134,7 @@
 
 
 
-#<h4> Reduce function
+# <h4> Reduce function
 
 
 #reduce() function returns an iterator were the items are filtered through a function to test if the item is accepted or not
