@@ -634,6 +634,8 @@ Difference between list and range objects @1:14:00
 #Komposite, Kafka, Airflow
 
 #All the python libraries used
+os, math (round, abs), functools (reduce), operator(add, mul), itertools (accumulate), flask,
+random, re, sys
 
 #Regex and sub function
 
