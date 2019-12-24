@@ -2,9 +2,9 @@
 # <h1> Python Topics
 
 NOTE: Please refer, below files in same directory
-python_collectins.py - For all about collections
-conversions.py - For all about explicit type conversions
-advanced_functions - For examples on lambda, map, filter, reduce, itertools etc
+python_collectins.py - For all about collections \n
+conversions.py - For all about explicit type conversions \n
+advanced_functions - For examples on lambda, map, filter, reduce, itertools etc \n
 
 # <h6> Python Language and Python Implementations
 
