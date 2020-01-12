@@ -25,6 +25,10 @@ Every docker images are stored in the Docker registry.
 
 
 
+# <h2> Difference between virtualization and containerization?
+	
+
+
 # <h2> What is Docker Engine?
 
 Docker daemon or Docker engine represents the server. 
