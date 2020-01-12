@@ -99,6 +99,31 @@ Hotfix Branches
 # <h2> How to save the work and switch between branches
 
 
+	git stash 
+
+"git stash" command temporarily stores (temporarily but safely) the uncommitted local changes. 
+This way we can come back and re-apply them later on.
+
+After stash we are free to make changes, create new commits, switch branches, and perform any other Git operations
+
+NOTE: Stash is local to your Git repository. Stashes are not transferred to the server when you push
 
 
+	$ git stash list 									# to list the list of stash
+	stash@{0}: WIP on master: 5002d47 our new homepage
+	stash@{1}: WIP on master: 5002d47 our new homepage
+	stash@{2}: WIP on master: 5002d47 our new homepage
+
+	git stash pop										# will re-apply the most recently created
+														#"git stash pop" applies and deletes the stash
+
+	git stash pop stash@{0}:
+
+
+	$ git stash drop stash@{1}							# to delete a stash
+	Dropped stash@{1} (17e2697fd8251df6163117cb3d58c1f62a5e7cdb) 
+
+	$ git stash clear 									# to clean all stash
+
+	
 # <h5> *Learn more about markdown [here](https://guides.github.com/features/mastering-markdown/)*
