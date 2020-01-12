@@ -43,16 +43,16 @@ regularly backup our Jenkins_Home directory
 
 # <h2> What are Declarative Pipelines in Jenkins?
 
-pipeline {
-    agent any
-    stages { 
-        stage('Example') {
-            steps {
-                echo 'Hello World'
-            }
-        }
-    }
-}
+	pipeline {
+	    agent any
+	    stages { 
+	        stage('Example') {
+	            steps {
+	                echo 'Hello World'
+	            }
+	        }
+	    }
+	}
 
 The above code has 3 major elements
 
@@ -95,4 +95,8 @@ Multi Config project
 Folder
 Github Org
 Multibranch pipeline
+
+
+# <h2> How to trigger jenkins build based on status changes on a jira ticket?
+
 

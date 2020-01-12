@@ -23,8 +23,35 @@ Github is repository hosting service. It provides more features like GUI, access
 Repository in Git is a place where Git stores all the files. Git can store the files either on the local repository or on the remote repository.
 
 
-# <h2> How can you create a repository in Git?
-“git init”
+# <h2> Frequently used git commands?
+
+	git init 								# to initalyze a local git repo
+	git clone <remote repo name>			# to clone a remote repo to local
+	git status
+	git add .
+	git commit -m "message"
+	git push
+	git push origin master
+
+	git pull
+	git fetch
+	git merge
+
+	git branch 								# lists all branches
+	git branch branchname					# creates new branch
+	git checkout branchname					# to switch to a branch
+
+	git stash 								# stashes (saves) with default name
+	git stash name 							# stashes with given name
+	git stash list 							# lists available stash lists
+	git stash drop name 					# drops a particular stash
+	git stash clear 						# drops all stash
+
+	git revert 								# revert a commit that has already been pushed and made public
+
+	git cherry-pick <commit-hash>
+
+	git diff-tree -r {hash}
 
 
 # <h2> What is ‘bare repository’ in Git?
@@ -45,11 +72,12 @@ Git can handle on its own most merges by using its automatic merging features. T
 
 # <h2> In Git how do you revert a commit that has already been pushed and made public?
 
-git revert <name of bad commit>
+	git revert <name of bad commit>
 
 
 # <h2> What is the difference between git pull and git fetch?
-Git pull = git fetch + git merge 
+	Git pull = git fetch + git merge 
+
 
 # <h2> What is ‘staging area’ or ‘index’ in Git?
 before completing the commits, it can be formatted and reviewed in an intermediate area known as ‘Staging Area’ or ‘Index’.
@@ -61,20 +89,35 @@ before completing the commits, it can be formatted and reviewed in an intermedia
  
 # <h2>  What is git cherry-pick?
  The command git cherry-pick is normally used to introduce particular commits from one branch within a repository onto a different branch.
- git cherry-pick <commit-hash>
+ 	git cherry-pick <commit-hash>
  
 # <h2>  How do you find a list of files that have changed in a particular commit?
- git diff-tree -r {hash}
+ 	git diff-tree -r {hash}
  
  
 # <h2>  What do you mean by Git fork?
  A Git fork is nothing but a copy of a Git repository. In a Git ecosystem forking down a Repository enables you with liberal experimentation with different changes with little or no Effects on your original project.
  
  
+
  
 # <h2>  What is the HEAD in git?
  HEAD is a reference to the last commit in the currently checked-out branch.
 cat .git/HEAD
+
+# <h2>  what is .gitignore
+
+Git sees every file in your working copy as one of three things:
+
+tracked - a file which has been previously staged or committed;
+untracked - a file which has not been staged or committed; or
+ignored - a file which Git has been explicitly told to ignore.
+
+Ignored files are tracked in a special file named .gitignore that is checked in at the root of your repository. 
+There is no explicit git ignore command
+Instead the .gitignore file must be edited and committed by hand when you have new files that you wish to ignore
+
+
 
 # <h2>  What are different branching strategy in Git
 
@@ -109,21 +152,21 @@ After stash we are free to make changes, create new commits, switch branches, an
 NOTE: Stash is local to your Git repository. Stashes are not transferred to the server when you push
 
 
-	$ git stash list 									# to list the list of stash
+	git stash list 									# to list the list of stash
 	stash@{0}: WIP on master: 5002d47 our new homepage
 	stash@{1}: WIP on master: 5002d47 our new homepage
 	stash@{2}: WIP on master: 5002d47 our new homepage
 
 	git stash pop										# will re-apply the most recently created
-														#"git stash pop" applies and deletes the stash
+														# "git stash pop" applies and deletes the stash
 
 	git stash pop stash@{0}:
 
 
-	$ git stash drop stash@{1}							# to delete a stash
+	git stash drop stash@{1}							# to delete a stash
 	Dropped stash@{1} (17e2697fd8251df6163117cb3d58c1f62a5e7cdb) 
 
-	$ git stash clear 									# to clean all stash
+	git stash clear 									# to clean all stash
 
 	
 # <h5> *Learn more about markdown [here](https://guides.github.com/features/mastering-markdown/)*

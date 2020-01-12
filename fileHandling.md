@@ -105,21 +105,21 @@ with open("myfile.txt", "r") as f:
 # <h5> The seek() method sets the current file position in a file stream.
 # <h5> The seek() method also returns the new postion.
 
-f = open("file1.txt", "r")
-f.seek(4)
-print(f.readline())
+	f = open("file1.txt", "r")
+	f.seek(4)
+	print(f.readline())
 
-f = open("file1.txt", "r")
-print(f.seek(4))
+	f = open("file1.txt", "r")
+	print(f.seek(4))
 
 
 # <h5> Check if File exist
-import os
-if os.path.exists("file1.txt"):
-    os.remove("file1.txt")
-else:
-    print("The file does not exist")
+	import os
+	if os.path.exists("file1.txt"):
+	    os.remove("file1.txt")
+	else:
+	    print("The file does not exist")
 
 
 # <h5> Delete Folder
-os.rmdir("myfolder")
+	os.rmdir("myfolder")
