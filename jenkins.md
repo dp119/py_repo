@@ -100,3 +100,6 @@ Multibranch pipeline
 # <h2> How to trigger jenkins build based on status changes on a jira ticket?
 
 
+# <h2> Jenkins or Maven lifecycle?
+
+	Build Test Deploy
