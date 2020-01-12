@@ -102,4 +102,4 @@ Multibranch pipeline
 
 # <h2> Jenkins or Maven lifecycle?
 
-	Build Test Deploy
+	Build Test Deploy Monitor
