@@ -86,4 +86,13 @@ By requesting manual builds. (polling)
 
 
 
+# <h2> Types of jobs in Jenkins?
+
+Freestyle project
+Maven project
+Pipeline
+Multi Config project
+Folder
+Github Org
+Multibranch pipeline
 

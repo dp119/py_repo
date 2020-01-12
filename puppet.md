@@ -24,3 +24,9 @@ The Facter is a system profiling library which is used to gather system informat
 
 # <h2> What is MCollective?
 The MCollective is a tool that is developed by the Puppet labs for server orchestration. MCollective helps to run thousands of jobs in parallel using your own or existing plugins.
+
+# <h2> What is Puppet architecture?
+
+# <h2> What is the difference between puppet and ansible?
+
+# <h2> Puppet uses push or pull method?

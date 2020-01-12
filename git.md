@@ -76,5 +76,29 @@ before completing the commits, it can be formatted and reviewed in an intermedia
  HEAD is a reference to the last commit in the currently checked-out branch.
 cat .git/HEAD
 
+# <h2>  What are different branching strategy in Git
+
+Feature Branches
+
+	Feature branches are the ones developers create to work on new features. 
+	After the feature is complete, the developer should merge the feature back to master.
+
+Release Branches
+
+	These branches allow for preparation of a new release. And besides that, they enable the developer to perform minor bug fixes and to prepare metadata for the release. 
+	
+	Since this work is being done in a separate branch, the development branch is free to receive featuresintended for the next release.
+	
+Hotfix Branches
+
+	Hotfix branches are for bug fixes.
+	This release isn’t planned. 
+	Instead, it’s due to necessity: a critical bug in production that must be dealt with swiftly
+
+
+# <h2> How to save the work and switch between branches
+
+
+
 
 # <h5> *Learn more about markdown [here](https://guides.github.com/features/mastering-markdown/)*
