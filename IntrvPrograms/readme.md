@@ -1,6 +1,15 @@
-
+..l; vcb 
 
 # <h1> Basic Programs
+
+# <h2> List of python of libraries used
+
+	math os random re sys
+
+
+# <h2> list vs tuple vs set
+
+	
 
 # <h2> Print String in reverse
 

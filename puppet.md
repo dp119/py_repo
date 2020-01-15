@@ -25,8 +25,42 @@ The Facter is a system profiling library which is used to gather system informat
 # <h2> What is MCollective?
 The MCollective is a tool that is developed by the Puppet labs for server orchestration. MCollective helps to run thousands of jobs in parallel using your own or existing plugins.
 
+
 # <h2> What is Puppet architecture?
 
+
+
 # <h2> What is the difference between puppet and ansible?
+
+Puppet has master slave arch. It has agent running on slaves
+Ansible has just the server and no agents
+
+
+Mode of communication
+Puppet communicates with the agent
+Ansible communicates with the node via SSH
+
+
+Puppet CM has pull based approach (clients poll a centralized master periodically for updates)
+Ansible has push based approach
+
+Ansible supports exception handling
+Puppet does not have exception handling support
+
+
+Both servers can only be installed on a LINUX machine
+
+
+Puppet has a DSL syntax and 
+Ansible uses YAML files with relatively simple syntax 
+
+
+Puppet config files are called manifests with extension .pp
+Ansible config files are called Playbook
+
+
+
+
+
 
 # <h2> Puppet uses push or pull method?
