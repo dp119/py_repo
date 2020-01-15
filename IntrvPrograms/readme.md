@@ -5,6 +5,8 @@
 # <h2> List of python of libraries used
 
 	math os random re sys
+	math (round, abs), functools (reduce), operator(add, mul), itertools (accumulate), flask,
+	
 
 
 # <h2> list vs tuple vs set
