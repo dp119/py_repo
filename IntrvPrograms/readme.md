@@ -8,6 +8,10 @@
 	math (round, abs), functools (reduce), operator(add, mul), itertools (accumulate), flask,
 	
 
+# <h2> What is PEP 8
+PEP 8, sometimes spelled PEP8 or PEP-8, is a document that provides guidelines and best practices on how to write Python code
+
+# <h2> What is keyword argument
 
 # <h2> list vs tuple vs set
 

@@ -563,26 +563,25 @@ advanced_functions.py - For examples on lambda, map, filter, reduce, itertools e
 
 
 
-
-#HashMap
-
-
-#Zip Function
-
-#Komposite, Kafka, Airflow
+# <h2> To be done
 
 
-#Regex and sub function
+Regex and sub function (email and ip address validation in regex)
 
-#Trim and strip, replace, replacestring function to remove whitespaces
+Code to Connect to db via python
+
+Code to Send mail via python
+
+Trim and strip, replace, replacestring function to remove whitespaces
+
+HashMap
+
+Zip Function
+
+Komposite, Kafka, Airflow
 
 
-Difference between lists and tuple
 
-What is PEP 8
-PEP 8, sometimes spelled PEP8 or PEP-8, is a document that provides guidelines and best practices on how to write Python code
-
-What is keyword argument
 
 # <h2> Debugging in VS Code discussed at 1:33
 
