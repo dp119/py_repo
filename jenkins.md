@@ -103,3 +103,75 @@ Multibranch pipeline
 # <h2> Jenkins or Maven lifecycle?
 
 	Build Test Deploy Monitor
+
+
+# <h2> Difference between Declarative and Scripted Pipeline in jenkins?
+
+
+# <h4> Pipeline Code Validation at startup
+
+	Eg: Build Step runs 5 mins
+	Test step runs 3 mins
+
+Scripted pipeline does not fail immediately. It runs each step before failing at a specific stage (in this example it runs for 5 mins for build and fails at test stage)
+
+Declarative pipeline fails immediately. Though the error is induced in test stage, the pipeline job fails immediately which saves time and computer resources.
+
+# <h4> Restart only the stages
+
+In Declarative pipeline only a particular stage can be run seperately. For example we can only run test stage.
+
+In Scripted pipeline, this feature is missing.
+
+
+# <h4> Declarative pipeline options
+	
+
+
+
+Declarative script is relatively new concept that supposts pipeline as code concept in jenkins.
+It is easier to read and write
+This code is written in a JenkinsFile and checked into the SCM such as Git.
+
+The Scripted pipeline is a traditional way of writing the code. In this pipeline, the Jenkinsfile is written on the Jenkins UI instance. 
+
+Declarative pipeline is defined within a block labellded "pipeline"
+
+	pipeline {
+	  agent { label 'node-1' }
+	  stages {
+	    stage('Source') {
+	      steps {
+	        git 'https://github.com/digitalvarys/jenkins-tutorials.git''
+	      }
+	    }
+	    stage('Compile') {
+	      tools {
+	        gradle 'gradle4'
+	      }
+	      steps {
+	        sh 'gradle clean compileJava test'
+	      }
+	    }
+	  }
+	}
+
+
+
+Scripted pipeline is defined within a ‘node’
+
+	node ('node-1') {
+	  stage('Source') {
+	    git 'https://github.com/digitalvarys/jenkins-tutorials.git''
+	  }
+	  stage('Compile') {
+	    def gradle_home = tool 'gradle4'
+	    sh "'${gradle_home}/bin/gradle' clean compileJava test"
+	  }
+	}
+
+
+
+Declarative type would be ideal  for simpler continuous delivery pipelines.
+
+Scripted type  ideal for users with more complex requirements.
