@@ -105,6 +105,19 @@ Multibranch pipeline
 	Build Test Deploy Monitor
 
 
+# <h2> How to perform user access job wise?
+
+
+
+# <h2> What are slaves and executors in jenkins?
+
+
+# <h2> How to establish communication between master and slave in jenkins?
+
+
+# <h2> A local repo has 10 commits performed. After which there is a push done to master. How to run test jobs for each of the commits in this push?
+
+
 # <h2> Difference between Declarative and Scripted Pipeline in jenkins?
 
 
@@ -123,17 +136,34 @@ In Declarative pipeline only a particular stage can be run seperately. For examp
 
 In Scripted pipeline, this feature is missing.
 
+# <h4> Skip stage option using WHEN block
+
+A stage can be skipped based on a condition in Scripted pipeline using the WHEN block.
+
 
 # <h4> Declarative pipeline options
-	
+
+Unlike scripted pipeline, there are options block in declarative pipeline. This acts as global settings.
+So the implementation block is clutter free.
 
 
+# <h4> Jenkins File in GIT vs Jenkins UI
 
 Declarative script is relatively new concept that supposts pipeline as code concept in jenkins.
 It is easier to read and write
 This code is written in a JenkinsFile and checked into the SCM such as Git.
 
 The Scripted pipeline is a traditional way of writing the code. In this pipeline, the Jenkinsfile is written on the Jenkins UI instance. 
+
+
+# <h4> Simple vs complex requirements
+
+Declarative type would be ideal for simpler continuous delivery pipelines.
+
+Scripted type  ideal for users with more complex requirements.
+
+
+# <h4> Syntax 
 
 Declarative pipeline is defined within a block labellded "pipeline"
 
@@ -171,7 +201,3 @@ Scripted pipeline is defined within a ‘node’
 	}
 
 
-
-Declarative type would be ideal  for simpler continuous delivery pipelines.
-
-Scripted type  ideal for users with more complex requirements.
