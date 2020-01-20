@@ -144,7 +144,7 @@ Hotfix Branches
 
 	git stash 
 
-"git stash" command temporarily stores (temporarily but safely) the uncommitted local changes. 
+"git stash" command temporarily stores (temporarily but safely) the uncommitted local changes.  
 This way we can come back and re-apply them later on.
 
 After stash we are free to make changes, create new commits, switch branches, and perform any other Git operations
@@ -167,6 +167,16 @@ NOTE: Stash is local to your Git repository. Stashes are not transferred to the 
 	Dropped stash@{1} (17e2697fd8251df6163117cb3d58c1f62a5e7cdb) 
 
 	git stash clear 									# to clean all stash
+
+
+# <h2> How to link git with JIRA for comments, stage changes etc
+
+Using Smart commit feature available in JIRA.
+
+
+# <h2> How to enforce branch naming strategies in GIT.
+
+Using branch rules in GIT repo settings.
 
 	
 # <h5> *Learn more about markdown [here](https://guides.github.com/features/mastering-markdown/)*
