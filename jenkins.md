@@ -79,22 +79,22 @@ Deploy
 
 # <h2> What are the various ways in which the build can be scheduled in Jenkins?
 
-After the completion of other builds.
-By source code management (modifications) commit. (webhook)
-At a specific time. (scheduled)
-By requesting manual builds. (polling)
+After the completion of other builds.  
+By source code management (modifications) commit. (webhook)  
+At a specific time. (scheduled)  
+By requesting manual builds. (polling)  
 
 
 
 # <h2> Types of jobs in Jenkins?
 
-Freestyle project
-Maven project
-Pipeline
-Multi Config project
-Folder
-Github Org
-Multibranch pipeline
+Freestyle project  
+Maven project  
+Pipeline  
+Multi Config project  
+Folder  
+Github Org  
+Multibranch pipeline  
 
 
 # <h2> How to trigger jenkins build based on status changes on a jira ticket?
@@ -123,7 +123,7 @@ Multibranch pipeline
 
 # <h4> Pipeline Code Validation at startup
 
-	Eg: Build Step runs 5 mins
+	Eg: Build Step runs 5 mins  
 	Test step runs 3 mins
 
 Scripted pipeline does not fail immediately. It runs each step before failing at a specific stage (in this example it runs for 5 mins for build and fails at test stage)
@@ -150,7 +150,7 @@ So the implementation block is clutter free.
 # <h4> Jenkins File in GIT vs Jenkins UI
 
 Declarative script is relatively new concept that supposts pipeline as code concept in jenkins.
-It is easier to read and write
+It is easier to read and write.  
 This code is written in a JenkinsFile and checked into the SCM such as Git.
 
 The Scripted pipeline is a traditional way of writing the code. In this pipeline, the Jenkinsfile is written on the Jenkins UI instance. 
