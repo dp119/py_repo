@@ -56,9 +56,9 @@ regularly backup our Jenkins_Home directory
 
 The above code has 3 major elements
 
-Pipeline: The block of script contents.
-Agent: Defines where the pipeline will start running from.
-Stage: The pipelines contain several steps enclosed in the block called Stage.
+Pipeline: The block of script contents.  
+Agent: Defines where the pipeline will start running from.  
+Stage: The pipelines contain several steps enclosed in the block called Stage.  
 
 
 
