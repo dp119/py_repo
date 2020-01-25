@@ -64,7 +64,7 @@ A working tree, or checked out copies of your project files.
 
 
 
-# <h2> What is a ‘conflict’ in git?
+# <h2> What is a ‘conflict’ in git? How to resolve it?
 
 Git can handle on its own most merges by using its automatic merging features. There arises a conflict when two separate branches have made edits to the same line in a file, or when a file has been deleted in one branch but edited in the other.
 
@@ -178,5 +178,6 @@ Using Smart commit feature available in JIRA.
 
 Using branch rules in GIT repo settings.
 
-	
+# <h2> How to enforce branch naming strategies in GIT
+
 # <h5> *Learn more about markdown [here](https://guides.github.com/features/mastering-markdown/)*

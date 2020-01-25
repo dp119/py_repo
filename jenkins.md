@@ -149,7 +149,7 @@ So the implementation block is clutter free.
 
 # <h4> Jenkins File in GIT vs Jenkins UI
 
-Declarative script is relatively new concept that supposts pipeline as code concept in jenkins.
+Declarative script is relatively new concept that supports pipeline as code concept in jenkins.
 It is easier to read and write.  
 This code is written in a JenkinsFile and checked into the SCM such as Git.
 
