@@ -53,7 +53,7 @@ Popular enterprise search engine.
 
 
 
-# <h4> ElasticSearch Features
+# <h3> ElasticSearch Features
 
 Distributed and Scalable Horizontally
 
@@ -76,7 +76,7 @@ E learning site to index courses, authors, topics covered
 
 
 
-# <h4> Elastic components
+# <h3> Elastic components
 Kibana is a data visualization.
 
 Logstash is a data processing pipeline
