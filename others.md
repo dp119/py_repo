@@ -1,6 +1,6 @@
 
-# <h4> What is Jboss or JBoss EAP (Enterprise application platform)?
-=====================
+# <h2>  What is Jboss or JBoss EAP (Enterprise application platform)?
+
 
 JBoss is an application server platform used for hosting highly transactional Java applications.
 
@@ -21,12 +21,12 @@ While you can still edit the XML files manually it’s not suggested to do so.
 
 
 
-Difference between web server and app server?
-=====================
+# <h2> Difference between web server and app server?
 
 
-# <h4> What is artifactory?
-=====================
+
+# <h2> What is artifactory?
+
 Artifactory is a product by JFrog that serves as a binary repository manager. 
 
 (That said very often one will use a 'artifactory' as a synonym of the more general binary repository, much like many people use Frigidaire or fridge to denote the refrigerator regardless if it is a Frigidaire brand or not)
@@ -35,8 +35,8 @@ Artifactory is a product by JFrog that serves as a binary repository manager.
 The binary repository is a natural extension to the source code repository, in that it will store the outcome of your build process, often denoted as artifacts. Most of the times one would not use the binary repository directly but through a package manager that comes with the chosen technology.
 
 
-# <h4> What is Elasticsearch?
-===================== 
+# <h2> What is Elasticsearch?
+
 Fully distributed enterprise search and analytics engine.
 Used to create own search engine or to analyze the data and extract useful information.
 
@@ -53,8 +53,8 @@ Popular enterprise search engine.
 
 
 
-ElasticSearch Features
-=====================
+# <h4> ElasticSearch Features
+
 Distributed and Scalable Horizontally
 
 High Availability because of multiple copies of data
@@ -76,7 +76,7 @@ E learning site to index courses, authors, topics covered
 
 
 
-
+# <h4> Elastic components
 Kibana is a data visualization.
 
 Logstash is a data processing pipeline
