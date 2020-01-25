@@ -1,6 +1,6 @@
 
 # <h4> What is Jboss or JBoss EAP (Enterprise application platform)?
-
+=====================
 
 JBoss is an application server platform used for hosting highly transactional Java applications.
 
@@ -20,8 +20,13 @@ The management console and management command-line interface (CLI) make editing 
 While you can still edit the XML files manually it’s not suggested to do so.
 
 
-# <h4> What is artifactory?
 
+Difference between web server and app server?
+=====================
+
+
+# <h4> What is artifactory?
+=====================
 Artifactory is a product by JFrog that serves as a binary repository manager. 
 
 (That said very often one will use a 'artifactory' as a synonym of the more general binary repository, much like many people use Frigidaire or fridge to denote the refrigerator regardless if it is a Frigidaire brand or not)
@@ -31,7 +36,7 @@ The binary repository is a natural extension to the source code repository, in t
 
 
 # <h4> What is Elasticsearch?
-
+===================== 
 Fully distributed enterprise search and analytics engine.
 Used to create own search engine or to analyze the data and extract useful information.
 
