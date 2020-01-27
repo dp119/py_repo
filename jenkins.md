@@ -201,3 +201,11 @@ Scripted pipeline is defined within a ‘node’
 	}
 
 
+# <h2> In Jenkins groovy how to copy files from one slave to another without using ssh or scp or sftp.
+
+Using groovy map
+
+# <h2> In Jenkins groovy how to pass parameters at one shot (like 30 parameters)?
+
+Using stash and unstash
+

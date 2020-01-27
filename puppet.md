@@ -64,3 +64,17 @@ Ansible config files are called Playbook
 
 
 # <h2> Puppet uses push or pull method?
+
+
+# <h2> What is heira files in puppet?
+
+
+# <h2> Which is the first file the puppet file looks for?
+
+	site.pp
+
+
+# <h2> Which is revision in puppet?
+
+
+# <h2> 
