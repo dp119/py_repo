@@ -68,6 +68,9 @@ A working tree, or checked out copies of your project files.
 
 Git can handle on its own most merges by using its automatic merging features. There arises a conflict when two separate branches have made edits to the same line in a file, or when a file has been deleted in one branch but edited in the other.
 
+Conflict can be resolved manually by removing the marked lines in the file. Then click on "Resolve now" and then on "compare and pull" 
+
+Conflict can also be resolved with git squash, git rebase and git merge methods
 
 
 # <h2> In Git how do you revert a commit that has already been pushed and made public?
@@ -98,6 +101,7 @@ before completing the commits, it can be formatted and reviewed in an intermedia
 # <h2>  What do you mean by Git fork?
  A Git fork is nothing but a copy of a Git repository. In a Git ecosystem forking down a Repository enables you with liberal experimentation with different changes with little or no Effects on your original project.
  
+ Then it can be merged with the original repo using Pull requests.
  
 
  
@@ -178,6 +182,10 @@ Using Smart commit feature available in JIRA.
 
 Using branch rules in GIT repo settings.
 
-# <h2> How to enforce branch naming strategies in GIT
+# <h2> What are git branch controls/rules?
 
+
+# <h2> How to trigger jenkins build job for each of the commits made in git?
+
+	
 # <h5> *Learn more about markdown [here](https://guides.github.com/features/mastering-markdown/)*
