@@ -112,3 +112,7 @@ REST leverages less bandwidth, making it more suitable for internet usage
 
 
 (which is why REST technology is generally preferred to the more robust Simple Object Access Protocol (SOAP) technology)
+
+
+# <h2> Explain different stages of maven life cycle.
+
