@@ -114,5 +114,161 @@ REST leverages less bandwidth, making it more suitable for internet usage
 (which is why REST technology is generally preferred to the more robust Simple Object Access Protocol (SOAP) technology)
 
 
+
+
+# <h2> What is Maven?
+
+Maven is Project management tool.  
+It is a framework which simplifies and standardizes the project build process for the team.
+
+
+# <h4> Default directory structure for Maven - 
+
+	source code			${basedir}/src/main/java
+	Resources			${basedir}/src/main/resources
+	Tests				${basedir}/src/test
+	Compiled byte code	${basedir}/target
+	distributable JAR	${basedir}/target/classes
+
+
+POM - Project Object Model
+
+It is fundamental unit of work in Maven. It is an XML file that resides in the base directory of the project as pom.xml
+
+It should be noted that there should be a single POM file for each project.
+
+	All POM files require the project element and three mandatory fields: groupId, artifactId, version.
+
+	Projects notation in repository is groupId:artifactId:version.
+
+
+
+
+The Super POM is Maven’s default POM. All POMs inherit from a parent or default (despite explicitly defined or not). This base POM is known as the Super POM, and contains values inherited by default.
+
+Command to check Super POM default configurations
+
+	mvn help:effective-pom
+
+
+
 # <h2> Explain different stages of maven life cycle.
+
+Prepare resources  
+Validate  
+Compile  
+Test  
+Package  
+Install  
+Deploy  
+
+Also there will be additional pre and post phases to register goals.
+
+When a phase is called via Maven command, for example mvn compile, only phases up to and including that phase will execute.
+
+# <h2> What is Build Profile in Maven?
+
+A Build profile is a set of configuration values, which can be used to set or override default values of Maven build.  
+Using a build profile, you can customize build for different environments such as Production v/s Development environments.
+
+A Maven Build Profile can be activated in various ways.
+
+	Explicitly using command console input.
+	Through maven settings.
+	Based on environment variables (User/System variables).
+	OS Settings (for example, Windows family).
+	Present/missing files.
+
+
+
+# <h2> Can we have multiple pom.xml in a project. What are the benefits?
+
+
+
+# <h2> What is a Maven Repository?
+
+In Maven terminology, a repository is a directory where all the project jars, library jar, plugins or any other project specific artifacts are stored and can be used by Maven easily.
+
+Maven repository are of three types. The following illustration will give an idea regarding these three types.
+
+	local 	- %USER_HOME% is the default directory. Override default location with %M2_HOME%\conf\settings.xml 
+	central - repository provided by Maven community
+	remote	- developer's own custom repository containing required libraries or other project jars
+
+
+# <h2>  What are Maven Plugins?
+Maven is actually a plugin execution framework where every task is actually done by plugins. Maven Plugins are generally used to −
+
+create jar file
+create war file
+compile code files
+unit testing of code
+create project documentation
+create project reports
+
+
+	mvn [plugin-name]:[goal-name]
+
+	mvn compiler:compile
+
+
+# <h2> Maven - External Dependencies?
+
+If dependency is not available in any of remote repositories and central repository?
+Maven provides answer for such scenario using concept of External Dependency.
+
+	Add lib folder to the src folder.
+
+	Copy any dependency/jar into the lib folder.
+
+	add this external dependency to maven pom.xml
+
+
+
+# <h2> What is SNAPSHOT in Maven?
+
+SNAPSHOT is a special version that indicates a current development copy
+
+Unlike regular versions, Maven checks for a new SNAPSHOT version in a remote repository for every build.
+
+# <h4> Snapshot vs Version
+
+In case of Version, if Maven once downloaded the mentioned version, say data-service:1.0, it will never try to download a newer 1.0 available in repository. To download the updated code, data-service version is be upgraded to 1.1.
+
+In case of SNAPSHOT, Maven will automatically fetch the latest SNAPSHOT (data-service:1.0-SNAPSHOT) every time the project is built.
+
+
+# <h2> What is Build Automation ?
+
+
+Build Automation defines the scenario where dependent project(s) build process gets started once the project build is successfully completed, in order to ensure that dependent project(s) is/are stable
+
+
+Example
+
+Consider a team is developing a project bus-core-api on which two other projects app-web-ui and app-desktop-ui are dependent.
+
+app-web-ui project is using 1.0-SNAPSHOT of bus-core-api project.
+app-desktop-ui project is using 1.0-SNAPSHOT of bus-core-api project.
+
+
+Now, teams of app-web-ui and app-desktop-ui projects require that their build process should kick off whenever bus-core-api project changes.
+
+We can proceed with the following two ways −
+
+	Add a post-build goal in bus-core-api pom to kick-off app-web-ui and app-desktop-ui builds.
+
+	Use a Continuous Integration (CI) Server like Hudson to manage build automation automatically.
+
+
+# <h2> What information does POM contain?
+POM contains the some of the following configuration information −
+
+	project dependencies
+	plugins
+	goals
+	build profiles
+	project version
+	developers
+	mailing list
 
