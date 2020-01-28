@@ -73,9 +73,9 @@ On UI - Conflict can be resolved manually by removing the marked lines in the fi
 On CLI - Navigate to the file having the merge conflict and open it in an editor. Search for conflict marker in the file. So edit the file manually and keep the changes that is to be incorporated. Then run git add <filename>
 
 Conflict markers look similar to below
-	<<<<<<< HEAD  
-	=======
-	>>>>>>> BRANCH-NAME
+	<<<<<<< HEAD   
+	=======   
+	>>>>>>> BRANCH-NAME  
 
 Conflict can also be resolved with git squash, git rebase and git merge methods
 
