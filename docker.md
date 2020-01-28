@@ -43,30 +43,54 @@ Docker can also have private registry.
 
 # <h2> Commands
 
-	docker ps 								# to see all running container
+	docker -version 						# to check docker version
+
+	docker pull	imagename					# Download an image from docker repository
 
 	docker run -i -t alpine /bin/bash 		# to run the image as a container
 
+	docker ps 								# to see all running container
+
+	docker ps -a							# to see all running and exited container 
+
+	docker exec -it <container id> bash		# to access running container
+
+	docker stop <container id>				# to stop a running container
+
+	docker kill <container id>				# to kill the container
+
+	# ‘docker stop’ gives the container time to shutdown gracefully, 
+	# in situations when it is taking too much time for getting the container to stop, one can opt to kill it
+
+	docker rm  <container id>				# to delete a stopped container
+
+	docker rmi <image-id>					# delete image from local storage
+
+	docker commit <conatainer id> <username/imagename>
+
+	docker push username/imagename			# to push the new image to Docker registry
+
+	docker images							# List of images downloaded
+
+	docker build <path to docker file>
 
 	docker info								# Information Command
 
-	docker pull								# Download an image
+	docker login							# to login to docker hub repository
 
 	docker stats							# Container information
 
-	Docker images							# List of images downloaded
-
 	docker-compose -f docker-compose.json up	# to use JSON instead of YAML compose file
 
-	docker push myorg/img					# to push the new image to Docker registry
+
 
 
 
 # <h2> What are the steps for the Docker container life cycle?
 
-Build
-Pull
-Run
+Build  
+Pull  
+Run  
 
 
 
@@ -88,9 +112,9 @@ Run
 
 # <h2> What are the different ways to build a docker image?
 
-Interactively building Images
-Using Dockerfile
-Importing from a tarball
+Interactively building Images  
+Using Dockerfile  
+Importing from a tarball  
 
 
 # <h4> Interactive mode
@@ -103,7 +127,7 @@ Importing from a tarball
 
 	2. Now make changes to the base container (add files/directories) and build layers
 
-	docker container commit py-flask my-flask
+	docker commit py-flask my-flask
 
 	3. Now run the newly created image
 
@@ -174,5 +198,12 @@ We can import the same image from the tarball wherever we need with *docker load
 	docker load < myflask.tar
 
 	docker image ls 					# it will list all images including the new one
+
+
+# <h2> Difference between RUN and CMD in dockerfile
+
+RUN lets you execute commands inside of your Docker image. These commands get executed once at build time and get written into your Docker image as a new layer.
+
+CMD lets you define a default command to run when your container starts.
 
 
