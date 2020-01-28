@@ -68,7 +68,14 @@ A working tree, or checked out copies of your project files.
 
 Git can handle on its own most merges by using its automatic merging features. There arises a conflict when two separate branches have made edits to the same line in a file, or when a file has been deleted in one branch but edited in the other.
 
-Conflict can be resolved manually by removing the marked lines in the file. Then click on "Resolve now" and then on "compare and pull" 
+On UI - Conflict can be resolved manually by removing the marked lines in the file. Then click on "Resolve now" and then on "compare and pull" 
+
+On CLI - Navigate to the file having the merge conflict and open it in an editor. Search for conflict marker in the file. So edit the file manually and keep the changes that is to be incorporated. Then run git add <filename>
+
+Conflict markers look similar to below
+<<<<<<< HEAD
+#=======
+>>>>>>> BRANCH-NAME
 
 Conflict can also be resolved with git squash, git rebase and git merge methods
 
@@ -92,8 +99,12 @@ before completing the commits, it can be formatted and reviewed in an intermedia
  
 # <h2>  What is git cherry-pick?
  The command git cherry-pick is normally used to introduce particular commits from one branch within a repository onto a different branch.
+
+ Cherry picking is the act of picking a commit from a branch and applying it to another.
+
  	git cherry-pick <commit-hash>
  
+
 # <h2>  How do you find a list of files that have changed in a particular commit?
  	git diff-tree -r {hash}
  
