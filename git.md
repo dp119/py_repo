@@ -92,6 +92,10 @@ Conflict can also be resolved with git squash, git rebase and git merge methods
 # <h2> What is ‘staging area’ or ‘index’ in Git?
 before completing the commits, it can be formatted and reviewed in an intermediate area known as ‘Staging Area’ or ‘Index’.
 
+The staging area is best described as a preview of your next commit.   
+Meaning, when you do a git commit , git will take the changes that are in the staging area and make the new commit out of those changes.  
+Used to fine-tune your commits
+
 
 # <h2>  What is the difference between the ‘git diff ’and ‘git status’?
  ‘git diff’ is similar to ‘git status’, the only difference is that it shows the differences between various commits and also between the working directory and index. 
@@ -117,16 +121,16 @@ before completing the commits, it can be formatted and reviewed in an intermedia
 
  
 # <h2>  What is the HEAD in git?
- HEAD is a reference to the last commit in the currently checked-out branch.
+HEAD is a reference to the last commit in the currently checked-out branch.
 cat .git/HEAD
 
-# <h2>  what is .gitignore
+# <h2>  what is .gitignore?
 
 Git sees every file in your working copy as one of three things:
 
-tracked - a file which has been previously staged or committed;
-untracked - a file which has not been staged or committed; or
-ignored - a file which Git has been explicitly told to ignore.
+tracked - a file which has been previously staged or committed;  
+untracked - a file which has not been staged or committed; or  
+ignored - a file which Git has been explicitly told to ignore.  
 
 Ignored files are tracked in a special file named .gitignore that is checked in at the root of your repository. 
 There is no explicit git ignore command
@@ -134,7 +138,7 @@ Instead the .gitignore file must be edited and committed by hand when you have n
 
 
 
-# <h2>  What are different branching strategy in Git
+# <h2>  What are different branching strategy in Git?
 
 Feature Branches
 
@@ -154,7 +158,7 @@ Hotfix Branches
 	Instead, it’s due to necessity: a critical bug in production that must be dealt with swiftly
 
 
-# <h2> How to save the work and switch between branches
+# <h2> How to save the work and switch between branches?
 
 
 	git stash 
@@ -184,12 +188,12 @@ NOTE: Stash is local to your Git repository. Stashes are not transferred to the 
 	git stash clear 									# to clean all stash
 
 
-# <h2> How to link git with JIRA for comments, stage changes etc
+# <h2> How to link git with JIRA for comments, stage changes etc?
 
 Using Smart commit feature available in JIRA.
 
 
-# <h2> How to enforce branch naming strategies in GIT.
+# <h2> How to enforce branch naming strategies in GIT?
 
 Using branch rules in GIT repo settings.
 
