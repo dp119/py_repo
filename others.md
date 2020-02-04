@@ -315,35 +315,35 @@ How to Setup Ansible and setup SSH connection and inventory?
 Introduction to Log management tools?
 
 
-Introduction about AWS cloud platform
-How to setup an AWS account and secure it using AMI service.
-Managing AWS users, groups, roles and policies.
-Managing AWS instances using EC2, Security Group and Key pair.
-Working with AWS services like ELB, EBS, S3, VPC, RDS and Route 53 etc.
+Introduction about AWS cloud platform  
+How to setup an AWS account and secure it using AMI service.  
+Managing AWS users, groups, roles and policies.  
+Managing AWS instances using EC2, Security Group and Key pair.  
+Working with AWS services like ELB, EBS, S3, VPC, RDS and Route 53 etc.  
 
 
 Nagios and Q&A
 
-System Monitoring tool using Nagios and Q&A
-Why Monitoring in important for continuous monitoring in DevOps?
-Introduction to Nagios for monitoring
-Concepts behind Nagios
-Installation and configuration Nagios.
-Generating reports and configuring notifications and checks.
-Analysing applications, network and server related issues.
-Q&A session to discuss queries and doubts.
-Overview on resume preparing and interview questions.
-Demo on sample Jenkins pipeline
+System Monitoring tool using Nagios and Q&A  
+Why Monitoring in important for continuous monitoring in DevOps?  
+Introduction to Nagios for monitoring  
+Concepts behind Nagios  
+Installation and configuration Nagios.  
+Generating reports and configuring notifications and checks.  
+Analysing applications, network and server related issues.  
+Q&A session to discuss queries and doubts.  
+Overview on resume preparing and interview questions.  
+Demo on sample Jenkins pipeline  
 
 
 
 # <h2> Opentext
-• 5+ yrs of experience in various log shippers for application, system, network devices like filebeat, metricbeat, fluentd, heka, logstash etc.
-• Developing and managing pipeline rules for high volume multi-tenant log providers in logstash.
-• Exposure in development of plugin to extend opensource features to suit enterprise needs on graylog/ELK technologies.
-• Good exposure to efficient grok, stream rules, pipeline extractors in graylog.
-• Manage and own Graylog infrastructure like capacity planning, upgrades and scaling.
-• Managing elastic index by developing solutions around tools like curator.
-• Exposure to automation technologies like Ansible and ability to develop playbook for automation.
-• Working experience with hybrid cloud model (Private Cloud, Public cloud) preferably exposure to GCP.
-• Exposure to containerization technologies (docker and Kubernetes).
+• 5+ yrs of experience in various log shippers for application, system, network devices like filebeat, metricbeat, fluentd, heka, logstash etc.  
+• Developing and managing pipeline rules for high volume multi-tenant log providers in logstash.  
+• Exposure in development of plugin to extend opensource features to suit enterprise needs on graylog/ELK technologies.  
+• Good exposure to efficient grok, stream rules, pipeline extractors in graylog.  
+• Manage and own Graylog infrastructure like capacity planning, upgrades and scaling.  
+• Managing elastic index by developing solutions around tools like curator.  
+• Exposure to automation technologies like Ansible and ability to develop playbook for automation.  
+• Working experience with hybrid cloud model (Private Cloud, Public cloud) preferably exposure to GCP.  
+• Exposure to containerization technologies (docker and Kubernetes).  
