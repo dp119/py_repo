@@ -1,0 +1,65 @@
+
+regex
+
+/g global
+/i case insensitive
+/m multiline
+
+
+* 0 or more
++ 1 or more
+? 0 or 1
+
+. Any character except new line
+^ Beginning of the line
+$ End of the line
+
+\w anyword character
+\W non character
+\s whitespace
+\S non whitespace
+
+Quantifier
+\w{4,5}
+
+[fc]at
+[a-z]at
+[0-9]at
+(t|T)he
+(t|e|r){2,3}
+re{2,3} vs (re){2,3} 
+
+
+
+/(?:(\+1)[ -])?\(?(\d{3})\)?[ -]?(\d{3})[ -]?(\d{4})/gm
+
+^(\w[\.\"+-]?)*([\"]?\w[\"]?)+@(\w[\.-]?\w+)+\.(com|name|museum|jp|org)$
+
+import re
+line = "pet:cat i love cats"
+#match = re.match(pattern,string,<flag=>)
+match = re.match(r"pet:  
+
+
+
+
+Hackerrank
+_________
+^(([a-z]){3}\.)(\w{3}\.)(\w{3}\.)(\w{3}\.?)
+
+^(([\Q\E]|[a-z]){3}\.)(\w{3}\.)(\w{3}\.)(\w{3}\.?)
+
+^([^a-z0-9]|[a-z0-9]){3}\.([^a-z0-9]|[a-z0-9]){3}\.([^a-z0-9]|[a-z0-9]){3}\.([^a-z0-9]|[a-z0-9]){3}$
+
+abc.def.ghi.jkx
+1123.456.abc.def
+123.456.abc.def
+123.123.123.132.123.123
+abc.def.ghi.jkx.abc
+...............
+`!@.#$%.^&*.()_
+
+12	23		123
+1223123
+
+

@@ -4,9 +4,131 @@
 
 # <h2> List of python of libraries used
 
-	math os random re sys
-	math (round, abs), functools (reduce), operator(add, mul), itertools (accumulate), flask,
+	os random re sys smtplib  logging csv ssl datetime
+	math (round, abs), functools (reduce), operator(add, mul), itertools (accumulate), flask, json
 	
+	
+# <h2> List of functions in the python Re module 
+
+	import re
+	txt = "The rain in Spain"
+	x = re.findall("Portugal", txt)
+	print(x)
+
+
+	re.match(pattern, string, flags=0)
+
+	
+	re.search(pattern, string, flags=0)
+	search() function searches the string for a match, and returns a Match object if there is a match
+	
+	NOTE: if you need to match at the beginning of the string, or to match the entire string use match. It is faster. Otherwise use search
+	
+	
+	re.findall("ai", txt)
+	findall() function returns a list containing all matches.
+	
+	split() function returns a list where the string has been split at each match
+	x = re.split("\s", txt)		#returns a list of words which are seperated by space
+	
+	
+	The sub() function replaces the matches with the text of your choice
+	
+	Replace every white-space character with the number 9:
+	import re
+
+	txt = "The rain in Spain"
+	x = re.sub("\s", "9", txt)
+	print(x)
+	
+
+A Match Object is an object containing information about the search and the result.	
+Note: If there is no match, the value None will be returned, instead of the Match Object
+The Match object has properties and methods used to retrieve information about the search, and the result:
+
+.span() returns a tuple containing the start-, and end positions of the match.
+.string returns the string passed into the function
+.group() returns the part of the string where there was a match
+
+
+# <h2> List of functions in the python smtplib module 
+
+	import smtplib
+
+	smtpObj = smtplib.SMTP( [host [, port [, local_hostname]]] )
+	
+host − This is the host running your SMTP server. You can specify IP address of the host or a domain name like tutorialspoint.com. This is optional argument.
+
+port − If you are providing host argument, then you need to specify a port, where SMTP server is listening. Usually this port would be 25.
+
+local_hostname − If your SMTP server is running on your local machine, then you can specify just localhost as of this option.
+
+
+	smtpObj.sendmail(sender, receivers, message)
+	
+	sender = 'from@fromdomain.com'
+	
+	receivers = ['to@todomain.com']
+	
+	message = """
+	Subject: SMTP e-mail test
+	This is a test e-mail message.
+	"""
+
+
+# <h2> List of functions in the python logging module 
+
+
+
+With the logging module imported, you can use something called a “logger” to log messages that you want to see. By default, there are 5 standard levels indicating the severity of events. Each has a corresponding method that can be used to log events at that level of severity. The defined levels, in order of increasing severity, are the following:
+	DEBUG
+	INFO
+	WARNING
+	ERROR
+	CRITICAL
+
+
+	import logging
+
+	logging.basicConfig(format='%(process)d-%(levelname)s-%(message)s')
+	logging.basicConfig(format='%(asctime)s - %(message)s', level=logging.INFO)
+
+
+	logging.debug('This is a debug message')
+	logging.info('This is an info message')
+	logging.warning('This is a warning message')
+	logging.error('This is an error message')
+	logging.critical('This is a critical message')
+
+
+You can customize the root logger even further by using more parameters for basicConfig()
+The functions debug(), info(), warning(), error() and critical() will call basicConfig() automatically if no handlers are defined for the root logger.
+
+
+# <h2> List of functions in the python os module 
+
+
+	os.name 			#returns OS name
+	os.chdir(
+	os.listdir
+	os.getcwd()			#
+	os.error
+	os.open()
+	os.close()
+	os.rename(
+
+
+# <h2> List of functions in the python date module
+	date.today().strftime
+	datetime.date.today()
+	datetime.timedelta(days=1)
+
+
+# <h2> List of functions in the python filehandling module 
+
+
+# <h2> List of functions in the python csv module
+
 
 # <h2> What is PEP 8
 PEP 8, sometimes spelled PEP8 or PEP-8, is a document that provides guidelines and best practices on how to write Python code
