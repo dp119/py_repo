@@ -232,7 +232,8 @@ CMD lets you define a default command to run when your container starts.
  Usage 
 
  	Decoupling container from storage. On deleting containers, volumes does not delete.
- 	Share and attach same volume among different containers
+
+ 	Share and attach same volume among different containers.
 
 # <h2> Can same volume be attached to different containers at the same time? If yes how is file read/write lock is achieved?
 
