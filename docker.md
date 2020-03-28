@@ -210,7 +210,7 @@ CMD lets you define a default command to run when your container starts.
 
 # <h2> Command to run jenkins from docker
 
-	docker pull jenkins 			#pulls from hub.docker.com
+	docker pull jenkins 									#pulls image from hub.docker.com
 
 	docker run --name myjenkins -p 8080:8080 -p 50000:50000 -v /d/jenkins:/var/jenkins_home jenkins
 
@@ -230,11 +230,12 @@ CMD lets you define a default command to run when your container starts.
 	Volumes are preferred mechanism for preserving data generated and required by docker containers.
 
  Usage 
+
  	Decoupling container from storage. On deleting containers, volumes does not delete.
  	Share and attach same volume among different containers
 
 # <h2> Can same volume be attached to different containers at the same time? If yes how is file read/write lock is achieved?
 
-	
+
 
 
