@@ -90,33 +90,40 @@ To check docker swarm command options
 
 # <h2> Step 7 :  Run containers on Docker Swarm
     docker service create --replicas 3 -p 80:80 --name serviceName nginx
-    Check the status:
+
+Check the status:
+
     docker service ls
     docker service ps serviceName
-    Check the service running on all nodes
-    Check on the browser by giving ip for all nodes
+
+Check the service running on all nodes
+Check on the browser by giving ip for all nodes
 
 # <h2> Step 8 :  Scale service up and down
-   On manager node 
-   docker service scale serviceName=2
+On manager node 
+
+	docker service scale serviceName=2
 
 Inspecting Nodes (this command can run only on manager node)
-docker node inspect nodename
-docker node inspect self
-docker node inspect worker1
+
+	docker node inspect nodename
+	docker node inspect self
+	docker node inspect worker1
 
 # <h2> Step 9 : Shutdown node
-   docker node update --availability drain worker1
+
+	docker node update --availability drain worker1
 
 # <h2> Step 10 :  Update service
-   docker service update --image imagename:version web
-   docker service update --image nginx:1.14.0 serviceName
+	
+	docker service update --image imagename:version web
+	docker service update --image nginx:1.14.0 serviceName
 
 # <h2> Step 11 :  Remove service
-   docker service rm serviceName
-docker swarm leave : to leave the swarm
-docker-machine stop machineName : to stop the machine
-docker-machine rm machineName : to remove the machine
+	docker service rm serviceName
+	docker swarm leave : to leave the swarm
+	docker-machine stop machineName : to stop the machine
+	docker-machine rm machineName : to remove the machine
 
 # <h2> REFERENCES:
 https://docs.docker.com/get-started/p...
