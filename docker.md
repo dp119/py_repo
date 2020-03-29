@@ -225,18 +225,67 @@ CMD lets you define a default command to run when your container starts.
 		Share the drive from docker on right had bottom corner or directly on the drive properties
 
 
-# <h2> What is the use of volume in docker?
+# <h2> What is the use of Volume and Bind Mount in docker. What happens if we do not use a volume?
 
+
+
+why Volume / Bind mount? :
+
+	By default all files created inside a running container are stored in a writable container layer.
+	After the container is killed, the files within container is is lost along with container.
+	(A containers writable layer is tightly coupled to the host machine where container is running. You cant easily move the data elsewhere)
+
+
+Volumes:
 	Volumes are preferred mechanism for preserving data generated and required by docker containers.
 
- Usage 
+	They are created on the host filesystem and are managed by docker processes.
+	Non docker processes cannot modify volumes.
+
+ Advantages: 
 
  	Decoupling container from storage. On deleting containers, volumes does not delete.
 
  	Share and attach same volume among different containers.
 
+ 	Volumes are isolated and are managed by docker. Hence avoid corruption and limits the changes.
+
+ 	Volumes are be mounted on multiple containers simultaneously.
+
+ 	Volumes support volume drivers to store data on remote hosts or on cloud providers.
+
+
+Bind Mounts:
+	
+	Stored anywhere on the filesystem and is referenced by it's full path.
+	Both docker and non docker processes can modify the files within.
+
+	This method is least preferred and not used at enterprise levels.
+
+
+
 # <h2> Can same volume be attached to different containers at the same time? If yes how is file read/write lock is achieved?
 
 
 
+# <h2> Docker volumes
 
+	docker volume							#more like help command
+	docker volume ls
+	docker volume create
+	docker volume inspect
+	docker volume rm
+	docker volume prune 					#deletes all volumes unused by the containers
+
+
+# <h2> How to remove all volumes not in use
+
+	docker volume prune						#deletes all volumes not in use by container at that point
+
+# <h2> What is docker Swarm?
+
+	Docker Swarm is tool for container orchestration.
+
+	Orchestration - managing and controlling multiple docker container as a single service
+	Eg: Docker Swarm, Kubernetes, Apache Mesos
+	
