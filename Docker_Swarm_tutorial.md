@@ -52,7 +52,9 @@ https://docs.docker.com/get-started/p...
 
     docker-machine ssh manager1
 
-# <h2> Step 4 :  Initialize Docker Swarm    docker swarm init --advertise-addr MANAGER_IP
+# <h2> Step 4 :  Initialize Docker Swarm    
+
+	docker swarm init --advertise-addr MANAGER_IP
 
     docker node ls
     (this command will work only in swarm manager and not in worker)
@@ -89,8 +91,7 @@ To check docker swarm command options
     docker swarm 
 
 # <h2> Step 7 :  Run containers on Docker Swarm
-    docker service create --replicas 3 -p 80:80 --name serviceName nginx
-
+ 
 Check the status:
 
     docker service ls
@@ -107,7 +108,7 @@ On manager node
 Inspecting Nodes (this command can run only on manager node)
 
 	docker node inspect nodename
-	docker node inspect self
+	docker node inspect self  
 	docker node inspect worker1
 
 # <h2> Step 9 : Shutdown node
@@ -115,14 +116,15 @@ Inspecting Nodes (this command can run only on manager node)
 	docker node update --availability drain worker1
 
 # <h2> Step 10 :  Update service
-	
-	docker service update --image imagename:version web
+
+	docker service update --image imagename:version web  
 	docker service update --image nginx:1.14.0 serviceName
 
 # <h2> Step 11 :  Remove service
-	docker service rm serviceName
-	docker swarm leave : to leave the swarm
-	docker-machine stop machineName : to stop the machine
+
+	docker service rm serviceName  
+	docker swarm leave : to leave the swarm  
+	docker-machine stop machineName : to stop the machine  
 	docker-machine rm machineName : to remove the machine
 
 # <h2> REFERENCES:
