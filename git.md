@@ -202,5 +202,8 @@ Using branch rules in GIT repo settings.
 
 # <h2> How to trigger jenkins build job for each of the commits made in git?
 
+# <h2> What is PR or how to take changes from feature to master branch?
+	
+# <h2> Suppose there are no changes to pull when a PR from feature to master. Will there be a conflict if master is merged to feature?
 	
 # <h5> *Learn more about markdown [here](https://guides.github.com/features/mastering-markdown/)*
