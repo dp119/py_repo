@@ -1,4 +1,8 @@
-
+# <h2>  How to get ouput of a powershell script into a batch file?
+	
+	for /f "delims=" %%a in ('powershell .\\powerhell_script.ps1') do Set "Status=%%a"
+	echo %Status%
+	
 # <h2>  What is Jboss or JBoss EAP (Enterprise application platform)?
 
 
