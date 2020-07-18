@@ -214,5 +214,7 @@ Using stash and unstash
 
 Job DSL - For creating new jobs from pipeline
 
+# <h2> After a pipeline job executes, Is it possible to automate trigger of jenkins freestyle job? Or is it possible to call freestyle from pipeline job?
+
 
 
