@@ -1,9 +1,12 @@
-# <h2>  How to get ouput of a powershell script into a batch file?
+
+
+#### <h2>  v1.0
+# <h4>  How to get ouput of a powershell script into a batch file?
 	
 	for /f "delims=" %%a in ('powershell .\\powerhell_script.ps1') do Set "Status=%%a"
 	echo %Status%
 	
-# <h2>  What is Jboss or JBoss EAP (Enterprise application platform)?
+# <h4>  What is Jboss or JBoss EAP (Enterprise application platform)?
 
 
 JBoss is an application server platform used for hosting highly transactional Java applications.
@@ -25,11 +28,11 @@ While you can still edit the XML files manually it’s not suggested to do so.
 
 
 
-# <h2> Difference between web server and app server?
+# <h4> Difference between web server and app server?
 
 
 
-# <h2> What is artifactory?
+# <h4> What is artifactory?
 
 Artifactory is a product by JFrog that serves as a binary repository manager. 
 
@@ -39,7 +42,7 @@ Artifactory is a product by JFrog that serves as a binary repository manager.
 The binary repository is a natural extension to the source code repository, in that it will store the outcome of your build process, often denoted as artifacts. Most of the times one would not use the binary repository directly but through a package manager that comes with the chosen technology.
 
 
-# <h2> What is Elasticsearch?
+# <h4> What is Elasticsearch?
 
 Fully distributed enterprise search and analytics engine.
 Used to create own search engine or to analyze the data and extract useful information.
@@ -57,7 +60,7 @@ Popular enterprise search engine.
 
 
 
-# <h3> ElasticSearch Features
+# <h4> ElasticSearch Features
 
 Distributed and Scalable Horizontally
 
@@ -80,7 +83,7 @@ E learning site to index courses, authors, topics covered
 
 
 
-# <h3> Elastic components
+# <h4> Elastic components
 Kibana is a data visualization.
 
 Logstash is a data processing pipeline
@@ -107,7 +110,7 @@ With added node the shards are rebalanced automatically by ES
 
 
 
-# <h2> What is REST api?
+# <h4> What is REST api?
 
 REST - or Representational State Transfer 
 (can be used over nearly any protocol, when used for web APIs it typically takes advantage of HTTP)
@@ -121,13 +124,13 @@ REST leverages less bandwidth, making it more suitable for internet usage
 
 
 
-# <h2> What is Maven?
+# <h4> What is Maven?
 
 Maven is Project management tool.  
 It is a framework which simplifies and standardizes the project build process for the team.
 
 
-# <h4> Default directory structure for Maven - 
+# <h5> Default directory structure for Maven - 
 
 	source code			${basedir}/src/main/java
 	Resources			${basedir}/src/main/resources
@@ -157,7 +160,7 @@ Command to check Super POM default configurations
 
 
 
-# <h2> Explain different stages of maven life cycle.
+# <h4> Explain different stages of maven life cycle.
 
 Prepare resources  
 Validate  
@@ -171,7 +174,7 @@ Also there will be additional pre and post phases to register goals.
 
 When a phase is called via Maven command, for example mvn compile, only phases up to and including that phase will execute.
 
-# <h2> What is Build Profile in Maven?
+# <h4> What is Build Profile in Maven?
 
 A Build profile is a set of configuration values, which can be used to set or override default values of Maven build.  
 Using a build profile, you can customize build for different environments such as Production v/s Development environments.
@@ -186,11 +189,11 @@ A Maven Build Profile can be activated in various ways.
 
 
 
-# <h2> Can we have multiple pom.xml in a project. What are the benefits?
+# <h4> Can we have multiple pom.xml in a project. What are the benefits?
 
 
 
-# <h2> What is a Maven Repository?
+# <h4> What is a Maven Repository?
 
 In Maven terminology, a repository is a directory where all the project jars, library jar, plugins or any other project specific artifacts are stored and can be used by Maven easily.
 
@@ -201,7 +204,7 @@ Maven repository are of three types. The following illustration will give an ide
 	remote	- developer's own custom repository containing required libraries or other project jars
 
 
-# <h2>  What are Maven Plugins?
+# <h4>  What are Maven Plugins?
 Maven is actually a plugin execution framework where every task is actually done by plugins. Maven Plugins are generally used to −
 
 create jar file
@@ -217,7 +220,7 @@ create project reports
 	mvn compiler:compile
 
 
-# <h2> Maven - External Dependencies?
+# <h4> Maven - External Dependencies?
 
 If dependency is not available in any of remote repositories and central repository?
 Maven provides answer for such scenario using concept of External Dependency.
@@ -230,20 +233,20 @@ Maven provides answer for such scenario using concept of External Dependency.
 
 
 
-# <h2> What is SNAPSHOT in Maven?
+# <h4> What is SNAPSHOT in Maven?
 
 SNAPSHOT is a special version that indicates a current development copy
 
 Unlike regular versions, Maven checks for a new SNAPSHOT version in a remote repository for every build.
 
-# <h4> Snapshot vs Version
+# <h5> Snapshot vs Version
 
 In case of Version, if Maven once downloaded the mentioned version, say data-service:1.0, it will never try to download a newer 1.0 available in repository. To download the updated code, data-service version is be upgraded to 1.1.
 
 In case of SNAPSHOT, Maven will automatically fetch the latest SNAPSHOT (data-service:1.0-SNAPSHOT) every time the project is built.
 
 
-# <h2> What is Build Automation ?
+# <h4> What is Build Automation ?
 
 
 Build Automation defines the scenario where dependent project(s) build process gets started once the project build is successfully completed, in order to ensure that dependent project(s) is/are stable
@@ -266,7 +269,7 @@ We can proceed with the following two ways −
 	Use a Continuous Integration (CI) Server like Hudson to manage build automation automatically.
 
 
-# <h2> What information does POM contain?
+# <h4> What information does POM contain?
 POM contains the some of the following configuration information −
 
 	project dependencies
@@ -277,7 +280,7 @@ POM contains the some of the following configuration information −
 	developers
 	mailing list
 
-# <h2> Ellucian
+# <h4> Ellucian
 
 Ansible Interview questions
 
@@ -289,13 +292,13 @@ Testing tools
 
 Relational VS Document databases
 
-# <h2> Optimum Solutions
+# <h4> Optimum Solutions
 
 Artifactory admin
 
 Groovy interview questions
 
-# <h2> JanBask (Trainer Role)
+# <h4> JanBask (Trainer Role)
 https://www.janbasktraining.com/devops-certification-training
 
 What is DevOps culture, SDLC introduction and agile methodology.
@@ -341,7 +344,7 @@ Demo on sample Jenkins pipeline
 
 
 
-# <h2> Opentext
+# <h4> Opentext
 • 5+ yrs of experience in various log shippers for application, system, network devices like filebeat, metricbeat, fluentd, heka, logstash etc.  
 • Developing and managing pipeline rules for high volume multi-tenant log providers in logstash.  
 • Exposure in development of plugin to extend opensource features to suit enterprise needs on graylog/ELK technologies.  
@@ -351,3 +354,34 @@ Demo on sample Jenkins pipeline
 • Exposure to automation technologies like Ansible and ability to develop playbook for automation.  
 • Working experience with hybrid cloud model (Private Cloud, Public cloud) preferably exposure to GCP.  
 • Exposure to containerization technologies (docker and Kubernetes).  
+
+
+#### <h2>  v2.0
+	
+# <h4> Tell me about any project where you have been driving E2E process & maintaining those
+
+# <h4> Suppose there are 10 services & they are dependent of each other & how to mitigate if some of them are unresponsive on the run time.
+
+# <h4> Suppose there are 5 applications in a BU. How do you evaluate if devops process is needed?
+
+# <h4> As a Lead what are the (Devops) metrics you evaluate to identify improvements in a system? 
+Existing system or a new system.
+
+Deployment frequency
+Change volume
+Deployment time
+Lead time
+Customer tickets
+Automated test pass %
+Defect escape rate
+Availability
+Service level agreements
+Failed deployments
+Error rates
+Application usage and traffic
+Application performance
+Mean time to detection (MTTD)
+Mean time to recovery (MTTR)
+
+# <h4> what is your approach if something blinks red in the system? how you approach & fix it up.
+
