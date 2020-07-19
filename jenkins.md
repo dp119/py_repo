@@ -220,18 +220,18 @@ Job DSL - For creating new jobs from pipeline
 # <h2>#####Jenkins V2
 
 # <h4>  What are the ways to integrate Jenkins with GIT ?
-# <h4>  What are the ways to integrate Jenkins with Jira ?
+# <h4>  What are the ways to integrate Jenkins with Jira ?  
 	
-# <h4>  How would you copy files from one server to another in jenkins?
+# <h4>  How would you copy files from one server to another in jenkins?  
 	
 # <h4>  Jenkins Shared Library folder structure?
 # <h4>  How to copy files in resources to Workspace?
-# <h4>  Is it possible to have shared library in local instead of git repo? If yes how do you configure?
+# <h4>  Is it possible to have shared library in local instead of git repo? If yes how do you configure?  
 	
-# <h4>  How do you automate job creation in jenkins?
+# <h4>  How do you automate job creation in jenkins?  
 	
 # <h4>  After a pipeline job executes, Is it possible to automate trigger of jenkins freestyle job? Or is it possible to call freestyle from pipeline job?
-# <h4>  (Trigger parameterized build on other projects)
+# <h4>  (Trigger parameterized build on other projects)  
 	
 # <h4>  For a new project implementaion how would you choose which pipeline to go with - Declarative and Scripted Pipeline?
 
