@@ -16,6 +16,7 @@
 
 <h3> PLAYBOOK  
     
+    
 play  
 task    
 actions    
@@ -29,6 +30,7 @@ actions
       
 ------------------
 <h3> MODULES  
+
 
 SYSTEM,SERVICE  
 COMMAND,SCRIPT  
@@ -146,11 +148,25 @@ Below commands used to debug configuration file issues
 ------------------
 
 
-<h3> Ansible Installation commands
-  
+h3> Ansible Installation commands
+
+
+YUM or apt or pip can be used based on the available package manager on the OS
+
     sudo pip3 install ansible
     
     sudo pip3 install ansible=2.5
     
     sudo pip3 install ansible --upgrade
   
+
+<h3> Ansible SSH 
+  
+ Generate SSH keys on Ansible controller
+ 
+     ssh-keygen -f ~/.ssh/ansible 
+ 
+ Add key from controller to managed node
+ 
+ 
+     ssh-copy-id -i dest-path user@host
