@@ -159,6 +159,7 @@ YUM or apt or pip can be used based on the available package manager on the OS
     
     sudo pip3 install ansible --upgrade
   
+------------------
 
 <h3> Ansible SSH 
   
@@ -170,3 +171,25 @@ YUM or apt or pip can be used based on the available package manager on the OS
  
  
      ssh-copy-id -i dest-path user@host
+
+
+------------------
+
+<h3> Adhoc Commands
+  
+Usually used as a short form of a playbook, used to test a command or a module
+
+    ansible -m module -i inventory
+    
+    ansible -m ping -i inventory 
+    
+    ansible -m ping localhost
+    
+Note: ansible ping is not same as ICMP ping on normal terminals. Ansible ping on tests ssh connectivity
+
+Replace -m with -a to just run a command
+
+    ansible -a 'cat /etc/hosts' localhost
+    
+------------------    
+
