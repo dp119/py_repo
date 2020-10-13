@@ -17,11 +17,9 @@ task
 actions
 
 
-  -
     name:
     hosts:
     tasks:
-      -
         name:
         command:
       
@@ -32,7 +30,8 @@ actions
 <h5> Idempotency - The result of executing an action is same as executing it multiple times without any intervening actions.
 
 
-<h2> Modules
+<h2> Modules  
+
 SYSTEM,SERVICE
 COMMAND,SCRIPT
 CLOUD
@@ -41,6 +40,7 @@ FILES,LINEINFILE
 
 
 <h2> VARIABLES
+
 Defined in 
 - Inventory file
 - playbook
@@ -51,7 +51,8 @@ Defined in
   when: result == 0
 
 
-<h2> ANSIBLE LOOPS
+<h2> ANSIBLE LOOPS  
+  
 lookup plugins
 
   loop:
