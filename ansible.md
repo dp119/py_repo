@@ -1,21 +1,21 @@
 
   
-<h3> INVENTORY FILE
+##<h3> INVENTORY FILE
   
-<h5> linux
+##<h5> linux
 
 
     WEB1 ansible_host= ansible_connection=ssh ansible_user= ansible_ssh_pass= ansible_ssh_private_key_file=
 
-<h5> windows
+##<h5> windows
 
 
     WEB2 ansible_host= ansible_connection=winrm ansible_user= ansible_password= ansible_ssh_private_key_file=
 
 ------------------
 
-<h3> PLAYBOOK  
-<h5>    
+##<h3> PLAYBOOK  
+##<h5>    
     
 play  
 task    
@@ -29,7 +29,7 @@ actions
         command:
       
 ------------------
-<h3> MODULES  
+##<h3> MODULES  
 
 
 SYSTEM,SERVICE  
@@ -39,14 +39,14 @@ DATABASE
 FILES,LINEINFILE  
 
 
-<h5> Freeform  
-<h5> Parameters  
-<h5> Idempotency - The result of executing an action is same as executing it multiple times without any intervening actions.  
+##<h5> Freeform  
+##<h5> Parameters  
+##<h5> Idempotency - The result of executing an action is same as executing it multiple times without any intervening actions.  
 
 
 ------------------
 
-<h3> VARIABLES  
+##<h3> VARIABLES  
 
 Defined in   
 - Inventory file  
@@ -55,13 +55,13 @@ Defined in
 
 ------------------
 
-<h3> CONDITIONALS  
+##<h3> CONDITIONALS  
 
     when: result == 0
 
 ------------------
 
-<h3> ANSIBLE LOOPS    
+##<h3> ANSIBLE LOOPS    
   
 lookup plugins
 
@@ -70,23 +70,23 @@ lookup plugins
 
 ------------------
 
-<h3> ANSIBLE RULES  
+##<h3> ANSIBLE RULES  
 
 ------------------
 
-<h3> ANSIBLE GALAXY  
+#<h3> ANSIBLE GALAXY  
 
 ------------------
 
-<h3> PATTERNS  
+#<h3> PATTERNS  
 
 ------------------
 
-<h3> DYNAMIC INVENTORY  
+#<h3> DYNAMIC INVENTORY  
 
 ------------------
 
-<h3> ANSIBLE COMMANDS  
+#<h3> ANSIBLE COMMANDS  
 
 To execute a playbook
 
@@ -112,7 +112,7 @@ skip tag
     
 ------------------
 
-<h3> Facts  
+#<h3> Facts  
   
 Facts internally uses "Setup" Module
 
@@ -125,7 +125,7 @@ To get info from ansible facts
 
 ------------------
 
-<h3> Configuration Files
+#<h3> Configuration Files
   
 Order of precedence of config files, least at the top
 
@@ -151,7 +151,7 @@ Below commands used to debug configuration file issues
 ------------------
 
 
-<h3> Ansible Installation commands
+#<h3> Ansible Installation commands
 
 
 YUM or apt or pip can be used based on the available package manager on the OS
@@ -164,7 +164,7 @@ YUM or apt or pip can be used based on the available package manager on the OS
   
 ------------------
 
-<h3> Ansible SSH 
+#<h3> Ansible SSH 
   
  Generate SSH keys on Ansible controller
  
@@ -178,7 +178,7 @@ YUM or apt or pip can be used based on the available package manager on the OS
 
 ------------------
 
-<h3> Adhoc Commands
+#<h3> Adhoc Commands
   
 Usually used as a short form of a playbook, used to test a command or a module
 
