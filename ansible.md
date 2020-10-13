@@ -1,6 +1,6 @@
 
   
-<h3> Inventory File
+<h3> INVENTORY FILE
   
 <h5> linux
 
@@ -148,7 +148,7 @@ Below commands used to debug configuration file issues
 ------------------
 
 
-h3> Ansible Installation commands
+<h3> Ansible Installation commands
 
 
 YUM or apt or pip can be used based on the available package manager on the OS
