@@ -15,7 +15,7 @@
 ------------------
 
 <h3> PLAYBOOK  
-    
+<h5>    
     
 play  
 task    
@@ -45,13 +45,16 @@ FILES,LINEINFILE
 
 
 ------------------
+
 <h3> VARIABLES  
 
 Defined in   
 - Inventory file  
 - playbook  
 - variable file  
+
 ------------------
+
 <h3> CONDITIONALS  
 
     when: result == 0
