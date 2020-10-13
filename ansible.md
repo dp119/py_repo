@@ -185,6 +185,8 @@ Usually used as a short form of a playbook, used to test a command or a module
     
     ansible -m ping localhost
     
+    ansible -m setup localhost    # to gather facts on localhost
+    
 Note: ansible ping is not same as ICMP ping on normal terminals. Ansible ping on tests ssh connectivity
 
 Replace -m with -a to just run a command
