@@ -60,6 +60,8 @@ Defined in
 # <h3> CONDITIONALS  
 
     when: result == 0
+	
+	register: result
 
 ------------------
 
@@ -224,7 +226,7 @@ Privilege Escalations can be done in as a
 
 - command parameter as below
 
-	ansible_playbook --become --become_method=doas --become_user=nginx --ask-become_pass
+		ansible_playbook --become --become_method=doas --become_user=nginx --ask-become_pass
 	
 	note: --ask-become_pass => to prompt for password
 	
@@ -232,18 +234,18 @@ Privilege Escalations can be done in as a
 
 - defined in playbook file
 	
-	become: true
-	become_user: admin
-	become_method: doas
+		become: true
+		become_user: admin
+		become_method: doas
 	
 - defined in inventory file
 
-	dev1 ansible_host=172.20.1.100 ansible_user=admin ansible_become=yes ansible_become_user=nginx
+		dev1 ansible_host=172.20.1.100 ansible_user=admin ansible_become=yes ansible_become_user=nginx
 	
 - defined in default config
 	
-	become	= true
-	become_method = doas
-	become_user = nginx
+		become	= true
+		become_method = doas
+		become_user = nginx
 	
 Default value of become_user directive is root
