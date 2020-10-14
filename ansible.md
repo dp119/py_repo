@@ -6,6 +6,8 @@
 
 
     WEB1 ansible_host= ansible_connection=ssh ansible_user= ansible_ssh_pass= ansible_ssh_private_key_file=
+	ansible_become=yes
+	ansible_become_user=nginx
 
 # <h5> windows
 
@@ -15,7 +17,7 @@
 ------------------
 
 # <h3> PLAYBOOK  
-# <h5>    
+
     
 play  
 task    
@@ -195,6 +197,53 @@ Note: ansible ping is not same as ICMP ping on normal terminals. Ansible ping on
 Replace -m with -a to just run a command
 
     ansible -a 'cat /etc/hosts' localhost
-    
-------------------    
+	
 
+Below command to print hostname of all managed nodes
+
+	ansible -a "hostname" -i playbooks/inventory all
+	
+Below command to copy from source to dest on node00 using copy module
+
+	ansible -m copy -a "src=/etc/resolv.conf dest=/tmp/resolv.conf" -i playbooks/inventory node00
+    
+Below command to Run an ad-hoc command to print the uptime of all managed nodes in the inventory file	
+	
+	ansible all -m shell -a uptime -i inventory
+	
+Below command to run playbook to read /etc/redhat-release file on all nodes in verbose mode	
+	
+	ansible-playbook -i playbooks/inventory playbooks/playbook.yml -vv
+	
+
+------------------
+
+# <h3> Privilege Escalations
+
+Privilege Escalations can be done in as a 
+
+- command parameter as below
+
+	ansible_playbook --become --become_method=doas --become_user=nginx --ask-become_pass
+	
+	note: --ask-become_pass => to prompt for password
+	
+	--become => to change the login shell for a remote user
+
+- defined in playbook file
+	
+	become: true
+	become_user: admin
+	become_method: doas
+	
+- defined in inventory file
+
+	dev1 ansible_host=172.20.1.100 ansible_user=admin ansible_become=yes ansible_become_user=nginx
+	
+- defined in default config
+	
+	become	= true
+	become_method = doas
+	become_user = nginx
+	
+Default value of become_user directive is root
