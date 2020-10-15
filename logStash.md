@@ -86,6 +86,9 @@ Example below to convert quantity value to integer with mutate plugin
 
 # <h3> Logstash Execution Model
 
-	![logstash1](/images/logstash/logstashExecutionModel.png) 
+Below image to explain logstash execution model
+
+	![logstashExecutionModel](/images/logstash/logstashExecutionModel.PNG) 
+	
 	
 	
