@@ -86,6 +86,6 @@ Example below to convert quantity value to integer with mutate plugin
 
 # <h3> Logstash Execution Model
 
-	![ansible1](/images/ansible_on_docker/logstashExecutionModel.png) 
+	![logstash1](/images/logstash/logstashExecutionModel.png) 
 	
 	
