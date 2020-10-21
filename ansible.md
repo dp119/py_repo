@@ -23,13 +23,29 @@ play
 task    
 actions    
 
+Eg1:
 
-    name:
-    hosts:
-    tasks:
+    - 
+      name:
+      hosts:
+      tasks:
+      -
         name:
         command:
       
+Eg2:      
+
+	-
+  		name: create a new VG called vg_sql
+  		hosts: node00
+  		tasks: 
+  		-
+    		name: create a new VG called vg_sql
+    		mount:
+      			src: /dev/vg_sql/lv_data 
+      			name: /mnt/data 
+      			fstype: ext4 
+      			state: mounted      
 ------------------
 # <h3> MODULES  
 
