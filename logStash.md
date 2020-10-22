@@ -91,4 +91,17 @@ Below image to explain logstash execution model
 ![logstashExecutionModel](/images/logstash/logstashExecutionModel.PNG)
 	
 	
-	
+------------------
+
+# <h3> Parsing Logstash
+
+Below command to load config file automatically without restarting logstash
+
+
+
+
+
+
+
+
+

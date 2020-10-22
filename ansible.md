@@ -265,3 +265,110 @@ Privilege Escalations can be done in as a
 		become_user = nginx
 	
 Default value of become_user directive is root
+
+
+------------------
+
+# <h3> Examples - File Handling
+
+To create a blank file 
+
+		-
+		  name: create a blank file
+		  hosts: web1
+		  tasks:
+		  -
+			name: create a blank file
+			lineinfile:
+			  path: '/var/www/html/index.html'
+			  state: present
+			  create: yes
+			  line: "This line was added using Ansible lineinfile module!"
+	  
+	  
+To create a file content with specified content in it
+
+		-
+		  name: create a blank file with content
+		  hosts: web1
+		  tasks:
+		  -
+			name: create a blank file with content
+			lineinfile:
+			  path: '/var/www/html/index.html'
+			  state: present
+			  create: yes
+			  line: "This line was added using Ansible lineinfile module!"
+	  
+To find files in /opt/data directory older than 2 minutes and equal or greater than 1 megabyte in size and also copy that files under /opt directory
+
+
+		---
+		- hosts: web1
+		  tasks:
+			- name: Find files
+			  find:
+				paths: /opt/data
+				recurse: yes
+				age: 120
+				size: 1m
+			  register: file
+
+			- name: Copy files
+			  command: "cp {{ item.path }} /opt"
+			  with_items: "{{ file.files }}"
+
+
+In /var/www/html/index.html file on web1 node add some additional content using blockinfile module. Make sure user owner and group owner of the file is apache also make sure the block is added at beginning of the file. Create new playbook for this ~/playbooks/index2.yml
+
+		-
+		  name: create a blank file
+		  hosts: web1
+		  tasks:
+		  -
+			name: create a blank file
+			blockinfile:
+			  path: '/var/www/html/index.html'
+			  owner: apache
+			  group: apache
+			  insertbefore: BOF
+			  block:
+				Welcome to KodeKloud!
+				This is Ansible Lab.
+
+On web1 node we want to run our httpd server on port 8080. Create a playbook ~/playbooks/httpd.yml to change port 80 to 8080 in /etc/httpd/conf/httpd.conf file using replace module. Also make sure Ansible restarts httpd service after making the change.
+Listen 80 is the parameter that need to be changes in /etc/httpd/conf/httpd.conf
+
+Solution 1:
+ 
+		-
+		  name: create a blank file
+		  hosts: web1
+		  tasks:
+		  -
+			name: create a blank file
+			replace:
+			  path: '/etc/httpd/conf/httpd.conf'
+			  regexp: 'Listen 80'
+			  replace: 'Listen 8080'
+			  
+		  -
+			name: restart httpd service
+			service:
+				name: httpd
+				state: restarted
+		
+Solution 2 (different syntax):		
+
+		---
+		- name: replace port 80 to 8080
+		  hosts: web1
+		  tasks:
+		  - replace:
+			  path: /etc/httpd/conf/httpd.conf
+			  regexp: 'Listen 80'
+			  replace: 'Listen 8080'
+		  - service: name=httpd state=restarted
+
+
+# <h3> Examples - Archiving
