@@ -372,3 +372,79 @@ Solution 2 (different syntax):
 
 ------------------
 # <h3> Examples - Archiving
+
+
+
+		---
+		- name: to make a zip archive opt.zip of /opt directory on web1 node and save it under /root on web1 node itself
+		  hosts: web1
+		  tasks:
+			- archive:
+				path: /opt
+				dest: /root/opt.zip
+				format: zip      
+
+
+		---
+		- name: to extract its contents on web1 under /tmp directory
+		  hosts: web1
+		  tasks:
+			- unarchive:
+				src: /home/thor/playbooks/local.zip
+				dest: /tmp
+				
+		---
+		- name: an archive data.tar.gz under /root directory, extract it under /srv directory and make sure data.tar.gz archive is removed
+		  hosts: web1
+		  tasks:
+		  - name: unzipping
+			unarchive:
+			  src: /root/data.tar.gz
+			  dest: /srv
+			  remote_src: yes
+
+		  - name: remove the source
+			file: path=/root/data.tar.gz state=absent
+
+		---
+		- name: Download  from URL and extract under /root directory
+		  hosts: web1
+		  tasks:
+		  -   unarchive:
+			   src: https://github.com/kodekloudhub/Hello-World/archive/master.zip
+			   dest: /root
+			   remote_src: yes
+			  
+			
+		---
+		- name: three files on web1 node /root/file1.txt, /usr/local/share/file2.txt and /var/log/lastlog. Create a bz2 archive of all these files and save it under /root, name the archive as files.tar.bz2
+		  hosts: web1
+		  tasks:
+		  -   archive:
+			   path: 
+				 - /root/file1.txt
+				 - /usr/local/share/file2.txt
+				 - /var/log/lastlog
+			   dest: /root/files.tar.bz2
+
+Setup nginx on web1 node with some sample html code. Create a playbook ~/playbooks/nginx.yml to do so. Below are the details about the task:
+a. Install nginx package and start/enable its service.
+b. Extract /root/nginx.zip archive under /usr/share/nginx/html directory.
+c. Inside /usr/share/nginx/html/index.html replace line This is sample html code with line This is KodeKloud Ansible lab.
+
+		---
+		- name: ngnix
+		  hosts:web1
+		  tasks:
+		  - yum:
+			 name: nginx
+			 state: present
+		  - service: name=httpd state=restarted	 
+		  - name: nginx
+			unarchive:
+			 src: /root/nginx.zip
+			 dest: /usr/share/nginx/html
+		  - replace:
+			  path: /etc/httpd/conf/httpd.conf
+			  regexp: 'This is sample html code'
+			  replace: 'This is KodeKloud Ansible lab'
