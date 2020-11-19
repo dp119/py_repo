@@ -439,12 +439,89 @@ c. Inside /usr/share/nginx/html/index.html replace line This is sample html code
 		  - yum:
 			 name: nginx
 			 state: present
-		  - service: name=httpd state=restarted	 
+		  - service: name=httpd state=restarted	enabled=yes
 		  - name: nginx
 			unarchive:
 			 src: /root/nginx.zip
 			 dest: /usr/share/nginx/html
+			 remote_src: yes
 		  - replace:
 			  path: /etc/httpd/conf/httpd.conf
 			  regexp: 'This is sample html code'
 			  replace: 'This is KodeKloud Ansible lab'
+			  
+			  
+# <h3> Examples - Cron Scheduler
+
+
+		To add a cron job Clear Lastlog on node00 to empty the /var/log/lastlog logs file. The job must run at 12am everyday.
+		You can use the command echo "" > /var/log/lastlog to empty the lastlog file and schedule should be 0 0 * * *.
+
+		- name: cron
+		  hosts: node00
+		  tasks:
+		  - cron:
+			 name: Clear Lastlog
+			 job : "echo  > /var/log/lastlog"
+			 minute: "0"
+			 hour: "0"
+			 
+
+
+		We have a script /root/free.sh on node00 that is used to check free system memory. We would like to create a cron Free Memory Check to execute this script at every 2 hour (i.e 12am, 2am, 4am etc), the command to execute the script is sh /root/free.sh and schedule should be 0 */2 * * *.
+		You can create a playbook ~/playbooks/script_cron.yml for this.
+
+
+		- name: cron
+		  hosts: node00
+		  tasks:
+		  - cron:
+			 name: Clear Lastlog
+			 job : "echo  > /var/log/lastlog"
+			 minute: "0"
+			 hour: "0"
+			 
+
+		We had a different cron earlier by the name Check Memory, to execute a different script - /root/free.sh on node00. That job was configured to run every 1 hour. However as we have now a new Cronjob configured let us get rid of the old one. Create a playbook ~/playbooks/remove_cron.yml to remove this cron from node00.
+
+		- name: remove cron
+		  hosts: node00
+		  tasks:
+		  - cron:
+			 name: "Check Memory"
+			 state: absent
+
+
+		Due to some disk space limitations we want to cleanup /tmp location on node00 host after every reboot. Create a playbook ~/playbooks/reboot.yml to add a cron named cleanup on node00 that will execute after every reboot and will clean /tmp location.
+
+		- name: reboot
+		  hosts: web1
+		  tasks:
+		  - cron:
+			 name: cleanup
+			 job: "rm -rf /tmp/*"
+			 special_time: reboot	 
+			 
+
+		On node00 we want to keep the installed packages up to date, so we would like to run yum updates regularly. Create a playbook ~/playbooks/yum_update.yml and create a cron job as described below:
+		a. Do not add cron directly using crontab instead create a cron file /etc/cron.d/ansible_yum.
+		b. The cron must run on every Sunday at 8:05 am.
+		c. The name of the cron must be yum update.
+		d. Cron should be added for user root
+		Use command yum -y update
+
+
+		- name: ansible
+		  hosts: node00
+		  tasks:
+		  - cron:
+			 name: "yum update"
+			 user: root
+			 job: "yum -y update"
+			 weekday: "7"
+			 hour: "8"
+			 minute: "5"
+			 cron_file: /etc/cron.d/ansible_yum		
+
+
+			 
