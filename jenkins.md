@@ -229,6 +229,7 @@ How to copy files in resources to Workspace?
 Is it possible to have shared library in local instead of git repo? If yes how do you configure?  
 	
 # <h4>  How do you automate job creation in jenkins?  
+Job DSL plugins
 	
 # <h4>  After a pipeline job executes, Is it possible to automate trigger of jenkins freestyle job? Or is it possible to call freestyle from pipeline job?
 (Trigger parameterized build on other projects)  
@@ -236,3 +237,6 @@ Is it possible to have shared library in local instead of git repo? If yes how d
 # <h4>  For a new project implementaion how would you choose which pipeline to go with - Declarative and Scripted Pipeline?
 
 
+# <h4>  Is it possible to run shell script within jenkins plugins?  If yes, a variable declared within groovy script is not available within the shell script. Why?
+Because it's not declared with env.Variable_name=
+	Eg: env.x=10
