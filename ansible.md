@@ -232,6 +232,10 @@ Below command to Run an ad-hoc command to print the uptime of all managed nodes 
 Below command to run playbook to read /etc/redhat-release file on all nodes in verbose mode	
 	
 	ansible-playbook -i playbooks/inventory playbooks/playbook.yml -vv
+
+Below command to view the output of a module (used as a alternative to debug command)	
+
+    ansible-playbook -i inventory playbook.yml -v
 	
 
 ------------------
@@ -524,4 +528,45 @@ c. Inside /usr/share/nginx/html/index.html replace line This is sample html code
 			 cron_file: /etc/cron.d/ansible_yum		
 
 
-			 
+# <h3> Examples - Magic Variables
+
+	We have an inventory file ~/playbooks/inventory in which two hosts are defined, we have defined dns_server=8.8.8.8 variable for node01.host managed node only. Write a playbook ~/playbooks/variable.yml to run a shell task for all managed nodes so that it picks node01.host hosts’s dns_server for all managed nodes and save the output of this task in /tmp/variable.txt on each managed node.	
+
+	---
+	- name: print_dns server
+	  hosts: all
+	  tasks:
+		- shell: "echo {{hostvars['node01.host'].dns_server}} >> /tmp/variable.txt"
+	
+Reference for special variables https://docs.ansible.com/ansible/latest/reference_appendices/special_variables.html	
+
+
+
+# <h3> Interview questions
+
+What is the Variables Order of Precedence in Ansible ?
+
+Group Variables (Defined in inventory at group level)
+Host Variables (Defined in inventory at host level)
+Play Variables (playbook)
+Extra Variables (Defined at command line)
+
+What is the scope of a variable defined for a host?
+
+Variable defined for a host is limited to that host and is available for next plays for that host.
+
+A register variable is created when we: Execute a task and save return value in a variable for use in later tasks 
+
+How do we print the results a command is returning? -v
+
+How to print uptime of a linux machine
+
+	- hosts: all
+	  tasks:
+		 - shell: uptime
+		   register: uptime_result
+
+		 - debug: var=uptime_result.stdout
+		 
+		 
+		 
